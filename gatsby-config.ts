@@ -10,7 +10,7 @@ const config: GatsbyConfig = {
     siteHeadline: `Showcasing the Development and Design Work of Vasyl Biliak`,
     siteUrl: `https://vasylbiliak.github.io`,
     siteDescription: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like React and Gatsby!`,
-    siteImage: `/static/favicon-32x32.png`,
+    siteImage: `/images/favicon-32x32.png`,
     siteLanguage: `en`,
     author: `VasylBiliak`,
   },
@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
         display: `standalone`,
         icons: [
           {
-            src: `/static/android-chrome-192x192.png`,
+            src: `/images/android-chrome-192x192.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
@@ -65,6 +65,14 @@ const config: GatsbyConfig = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: "pages",
       },
     },
     `gatsby-plugin-image`,

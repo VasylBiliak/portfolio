@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { FaArrowUp } from "react-icons/fa";
-// import { RxThickArrowUp } from "react-icons/rx";
 import { ImArrowUp } from "react-icons/im";
-import { GoChevronUp } from "react-icons/go";
 import * as stules from "./backToBtn.module.css";
 
 const BackToBtn: React.FC = () => {

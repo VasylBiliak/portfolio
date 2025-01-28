@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from 'framer-motion';
 import "../styles/global.css";
-import TextAnimation from "./textJello";
+import TextAnimation from "./textJello/";
 import AnimatedTypingText from "./animatedTypingText/AnimatedTypingText";
 
 const Home: React.FC = () => {

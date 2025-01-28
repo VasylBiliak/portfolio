@@ -1,6 +1,6 @@
 import React from "react";
 import * as styles from "./about.module.css";
-import { StaticImage } from "gatsby-plugin-image";
+// import { StaticImage } from "gatsby-plugin-image";
 
 
 const About: React.FC = () => {
@@ -20,13 +20,13 @@ const About: React.FC = () => {
                 </p>
             </div>
             <div className={styles.dp} data-aos="fade-up">
-                <StaticImage
-                    src="../../images/Me.png"
-                    alt="My description"
-                    placeholder="blurred"
-                    width={300}
-                    layout="constrained"
-                />
+                {/*<StaticImage*/}
+                {/*    src="../../images/Me.png"*/}
+                {/*    alt="My description"*/}
+                {/*    placeholder="blurred"*/}
+                {/*    width={300}*/}
+                {/*    layout="constrained"*/}
+                {/*/>*/}
                 {/*<img src="../../images/my_main_img.jpg" alt="Biliak Vasyl" tabIndex="0" aria-label="image of Biliak Vasyl"  />*/}
             </div>
 
