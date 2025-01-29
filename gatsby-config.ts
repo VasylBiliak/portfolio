@@ -15,7 +15,7 @@ const config: GatsbyConfig = {
     siteLanguage: `en`,
     author: `VasylBiliak`,
   },
-  pathPrefix: `/vasyl-biliak-portfolio`,
+  pathPrefix: `/portfolio`,
   trailingSlash: `always`,
   plugins: [
     {
@@ -25,7 +25,7 @@ const config: GatsbyConfig = {
         short_name: `Portfolio`,
         description: `A personal portfolio by Vasyl Biliak, showcasing development and design
          projects using modern web technologies like React and Gatsby!`,
-        start_url: `/vasyl-biliak-portfolio`,
+        start_url: `/portfolio`,
         background_color: `#141821`,
         display: `standalone`,
         icons: [

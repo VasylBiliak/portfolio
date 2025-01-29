@@ -1,12 +1,12 @@
 {
   "private": true,
-  "name": "portfolio",
+  "name": "vasyl-biliak-portfolio",
   "description": "A playful and colorful one-page portfolio featuring parallax effects and animations, built with React and Gatsby.",
   "version": "0.2.16",
   "author": "Vasyl Biliak",
   "license": "Apache-2.0",
   "starter-name": "vasyl-biliak-portfolio",
-  "homepage": "https://VasylBiliak.github.io/vasyl-biliak-portfolio",
+  "homepage": "https://VasylBiliak.github.io/portfolio",
   "scripts": {
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
