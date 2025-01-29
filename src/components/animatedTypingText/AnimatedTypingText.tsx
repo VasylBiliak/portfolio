@@ -17,7 +17,7 @@ interface AnimatedTypingTextProps {
 
 const AnimatedTypingText: React.FC<AnimatedTypingTextProps> = ({ text, duration = 4 }) => {
     return (
-        <div>
+        <>
             {text.split('').map((char, index) => (
                 <motion.span
                     key={index}
@@ -31,7 +31,7 @@ const AnimatedTypingText: React.FC<AnimatedTypingTextProps> = ({ text, duration 
                     {char}
                 </motion.span>
             ))}
-        </div>
+        </>
     );
 };
 

@@ -1,7 +1,6 @@
 .info_dp_section {
     width: 100%;
     display: grid;
-    /*grid-template-columns: repeat(2, 1fr);*/
     grid-template-columns: 1fr auto;
     gap: 20px;
     align-items: center;
@@ -31,23 +30,11 @@
     transition-duration: 0.5s;
 }
 
-.dp img {
+.image {
     width: 100%;
     max-width: 300px;
     border-radius: 50%;
     height: auto;
-    /*border-radius: 10px;*/
-}
-
-
-.dp:hover .dp__after {
-    transform: translate(20px, 20px);
-    transition-duration: 0.5s;
-}
-
-.dp:hover .dp__before {
-    transform: translate(-20px, -20px);
-    transition-duration: 0.5s;
 }
 
 @media (max-width: 768px) {
@@ -55,7 +42,8 @@
         grid-template-columns: 1fr;
     }
 
-    .dp img {
+    .image {
         max-width: 100%;
+        margin: 0 15%;
     }
 }

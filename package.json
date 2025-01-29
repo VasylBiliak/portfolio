@@ -14,7 +14,9 @@
     "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "start": "gatsby develop",
+
     "serve": "gatsby serve",
+
     "clean": "gatsby clean",
     "predeploy": "gatsby build"
   },
@@ -22,9 +24,12 @@
     "framer-motion": "^11.18.0",
     "gatsby": "^5.14.1",
     "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^3.14.0",
     "gatsby-plugin-manifest": "^5.14.0",
+    "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-plugin-webpack-statoscope": "^1.0.3",
     "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-transformer-sharp": "^5.14.0",
     "nprogress": "^0.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

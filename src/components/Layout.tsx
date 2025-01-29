@@ -3,7 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from "./Footer";
 import BackToBtn from "./backToBtn";
 import "../styles/global.css";
-import Helmet from "./helmet/Helmet";
+import Helmet from "./helmet";
 
 interface LayoutProps {
     children: ReactNode;
@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div className="layout">
-            {/*<Helmet/>*/}
+            <Helmet/>
             <Navbar />
             <main className="content">{children}</main>
             <Footer />

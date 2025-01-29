@@ -1,6 +1,10 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaNpm } from 'react-icons/fa';
-import { SiJavascript, SiTypescript, SiRedux, SiGatsby, SiMysql, SiMongodb, SiFirebase } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaGitAlt, FaNpm,
+    FaGithub, FaGitlab, FaLinux, FaUbuntu, FaAppStore, FaPython,
+    FaNetworkWired, FaIndustry, FaCogs } from 'react-icons/fa';
+
+import { SiJavascript, SiTypescript, SiRedux, SiGatsby, SiMysql,
+        SiMongodb, SiFirebase, SiPostgresql, SiSequelize } from 'react-icons/si';
 import { MdDevices } from 'react-icons/md';
 import * as styles from "./skills.module.css";
 
@@ -19,13 +23,25 @@ const skills = [
     { color: '#ffa50f', text: 'Firebase', icon: SiFirebase },
     { color: '#f14e32', text: 'Git', icon: FaGitAlt },
     { color: '#cb3837', text: 'npm', icon: FaNpm },
+    { color: '#333', text: 'GitHub', icon: FaGithub },
+    { color: '#FCA121', text: 'GitLab', icon: FaGitlab },
+    { color: '#000000', text: 'Linux', icon: FaLinux },
+    { color: '#E95420', text: 'Ubuntu', icon: FaUbuntu },
+    { color: '#FF5C5C', text: 'Postman', icon: FaAppStore },
+    { color: '#3C3C3C', text: 'Pgadmin4', icon: SiPostgresql },
+    { color: '#306998', text: 'Python', icon: FaPython },
+    { color: '#2F2F2F', text: 'TCP/IP', icon: FaNetworkWired },
+    { color: '#F05032', text: 'Sequelize', icon: SiSequelize },
+    { color: '#F39C12', text: 'TiaPortal', icon: FaIndustry },
+    { color: '#27AE60', text: 'EasyBuilder', icon: FaCogs }
+
 ];
 
 const Skills: React.FC = () => {
     return (
                 <ul className={styles.skills_list}>
-                    {skills.map((skill, index) => (
-                            <li className={styles.skill} key={index} data-aos="fade-up">
+                    {skills.map((skill) => (
+                            <li className={styles.skill} key={skill.text} data-aos="fade-up">
                                 <skill.icon  style={{ fontSize: '90px', color: skill.color, marginBottom: '1.5rem' }} aria-hidden="true" />
                                 <p>{skill.text}</p>
                             </li>

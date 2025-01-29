@@ -101,7 +101,7 @@
     overflow: hidden;
 }
 
-.projects_list__image img {
+.projects_list__image, image {
     width: 100%;
     height: auto;
     max-width: 100%;
@@ -132,7 +132,6 @@
     }
 
     .projects_list__box {
-
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
@@ -145,17 +144,19 @@
 
 @media screen and (max-width: 430px) {
     .projects_list__box {
-        gap: 0.5rem;
         grid-template-columns: 1fr;
     }
     .projects_list__image {
 
     }
 
-    .projects_list__image img {
+    .projects_list__image image {
         border-radius: 10px;
     }
 }
 
 @media screen and (max-width: 300px) {
+    .projects_list__box {
+        gap: 0.9rem;
+    }
 }

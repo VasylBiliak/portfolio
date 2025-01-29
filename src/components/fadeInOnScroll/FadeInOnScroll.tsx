@@ -20,7 +20,7 @@ const FadeInOnScroll: React.FC<FadeInOnScrollProps> = ({ children }) => {
         hidden: { opacity: 0, y: 0 },
         visible: {opacity: 1, y: -useSpacing(),},
     };
-    console.log(-spacing)
+
     return (
         <motion.div
             className={`${styles.container}`}
