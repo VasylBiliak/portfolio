@@ -1,1 +1,1 @@
-export { default } from './FadeInOnScroll.tsx';
+export { default } from './FadeInOnScroll';

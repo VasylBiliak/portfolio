@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './projects.module.css';
 import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
-import { StaticImage } from 'gatsby-plugin-image';
+// import { StaticImage } from 'gatsby-plugin-image';
 
 
 const Projects: React.FC = () => {
@@ -45,13 +45,13 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
                         <div className={styles.projects_list__image}>
-                            <StaticImage
-                                src="../../images/aboutIMG.svg"
-                                alt="My description"
-                                placeholder="blurred"
-                                min-width={300}
-                                layout="constrained"
-                            />
+                            {/*<StaticImage*/}
+                            {/*    src="../../images/aboutIMG.svg"*/}
+                            {/*    alt="My description"*/}
+                            {/*    placeholder="blurred"*/}
+                            {/*    min-width={300}*/}
+                            {/*    layout="constrained"*/}
+                            {/*/>*/}
                             {/*<img src='/images/aboutIMG.svg' alt='' />*/}
                         </div>
                     </div>
@@ -90,13 +90,13 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
                         <div className={styles.projects_list__image}>
-                            <StaticImage
-                                src="../../images/tor_assembly.png"
-                                alt="TorAssembly Project Logo"
-                                placeholder="blurred"
-                                min-width={300}
-                                layout="constrained"
-                            />
+                            {/*<StaticImage*/}
+                            {/*    src="../../images/tor_assembly.png"*/}
+                            {/*    alt="TorAssembly Project Logo"*/}
+                            {/*    placeholder="blurred"*/}
+                            {/*    min-width={300}*/}
+                            {/*    layout="constrained"*/}
+                            {/*/>*/}
                             {/*<img src="/images/tor_assembly.png" alt="TorAssembly Project Logo" />*/}
                         </div>
                     </div>
@@ -133,13 +133,13 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
                         <div className={styles.projects_list__image}>
-                            <StaticImage
-                                src="../../images/about.png"
-                                alt="TorAssembly Project Logo"
-                                placeholder="blurred"
-                                min-width={300}
-                                layout="constrained"
-                            />
+                            {/*<StaticImage*/}
+                            {/*    src="../../images/about.png"*/}
+                            {/*    alt="TorAssembly Project Logo"*/}
+                            {/*    placeholder="blurred"*/}
+                            {/*    min-width={300}*/}
+                            {/*    layout="constrained"*/}
+                            {/*/>*/}
                             {/*<img src="../../images/about.png" alt="FE Course Basic 2023 Project Logo" />*/}
                         </div>
                     </div>

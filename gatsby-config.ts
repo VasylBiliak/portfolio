@@ -4,18 +4,19 @@ import "dotenv/config";
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 const config: GatsbyConfig = {
+
   siteMetadata: {
-    siteTitle: `portfolio-bv`,
+    siteTitle: `Portfolio`,
     siteTitleAlt: `Portfolio of Vasyl Biliak`,
     siteHeadline: `Showcasing the Development and Design Work of Vasyl Biliak`,
     siteUrl: `https://vasylbiliak.github.io`,
     siteDescription: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like React and Gatsby!`,
-    siteImage: `/images/favicon-32x32.png`,
+    siteImage: `/images/my_main_img.jpg`,
     siteLanguage: `en`,
     author: `VasylBiliak`,
   },
-  trailingSlash: `always`,
   pathPrefix: `/vasyl-biliak-portfolio`,
+  trailingSlash: `always`,
   plugins: [
     {
       resolve: `gatsby-plugin-manifest`,
@@ -29,12 +30,12 @@ const config: GatsbyConfig = {
         display: `standalone`,
         icons: [
           {
-            src: `/images/android-chrome-192x192.png`,
+            src: `/favicons/favicon-192x192.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `/static/android-chrome-512x512.png`,
+            src: `/favicons/favicon-512x512.png`,
             sizes: `512x512`,
             type: `image/png`,
           },
@@ -60,24 +61,6 @@ const config: GatsbyConfig = {
         display: 'swap',
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
-      },
-    },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
   ].filter(Boolean) as Array<PluginRef>,
 };
 
