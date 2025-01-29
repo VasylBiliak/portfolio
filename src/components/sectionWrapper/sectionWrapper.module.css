@@ -1,0 +1,30 @@
+.wrapper_section {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    justify-items: center;
+    gap: 6rem;
+}
+
+.section_content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 60px;
+}
+
+.section_title {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-title);
+    font-size: var(--font-size-heading);
+    font-weight: 700;
+    background-image: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-content: center;
+}
+

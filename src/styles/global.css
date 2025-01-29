@@ -1,0 +1,153 @@
+@import './layout.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+*::-moz-selection {
+    background: transparent;
+}
+
+
+* {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+        /*
+    -webkit-user-select: none;
+    Prevents the user from selecting text or elements.
+    Commonly used on interactive elements like buttons to improve user experience.
+
+    -webkit-tap-highlight-color: transparent;
+    Disables the default tap highlight effect (gray or blue overlay)
+    that appears on mobile devices when touching an element.
+    This is useful for custom-styled interactive elements to avoid visual interruptions.
+    */
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    --font-title: 'Raleway', sans-serif;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Lora', serif;
+    --font-mono: 'Fira Code', monospace;
+
+    --font-size-small: 1.2rem;
+    --font-size-skill-title: 2rem;
+    --font-size-base: 2.3rem;
+    --font-size-large: 2.4rem;
+    --font-size-xlarge: 3.2rem;
+
+    --font-size-heading: 4rem;
+    --font-size-name: 6.8rem;
+
+/* Primary background and text colors */
+    --color-background-primary: #11111b; /* Main dark background color */
+    --color-background-secondary: #0a0a10; /* Secondary dark background for additional elements */
+    --color-text-primary: #ffffff; /* Main text color for high contrast */
+    --color-text-secondary: #c4c4c4; /* Secondary text color for less emphasis */
+
+    /* Border and shadow colors */
+    --color-border: #292929; /* Border color for elements */
+    --color-shadow: rgba(0, 0, 0, 0.137); /* Shadow color for depth effect */
+
+    /* Gradient colors */
+    --gradient-primary-light: linear-gradient(45deg, #074242, #074b4b, #074646, #0f7878);
+    --gradient-primary-dark: linear-gradient(45deg, #ffff00, #dede28, #0f7878, #096565);
+
+    /*--gradient-primary: linear-gradient(45deg, #053a3a, #064646, #055252, #0f7878);*/
+    --gradient-secondary: linear-gradient(90deg, #6bc6f7, #0f7575);
+
+    /*    -  background-transparent*/
+    --color-background-transparent: transparent;
+
+/*    hover btn*/
+    --color-hover-background: #0f7878;
+
+/*    mode*/
+    --color-light-mode: #d7ca91;
+    --color-dark-mode: #171717;
+
+    --color-btn-light: yellow;
+    --color-btn-light-hover: #000000;
+
+    --color-btn-light-2: #0f785c;
+
+    --bg-color-btn-dark: #000000;
+    --bg-color-btn-dark-hover: yellow;
+
+    --color-mode: var(--color-dark-mode);
+
+    --color-btn: var(--bg-color-btn-dark);
+    --bg-color-btn: var(--color-btn-light);
+
+    /*Jello text*/
+    --color-jello-bace: #159374;
+    --color-jello: var(--color-jello-bace);
+    --color-jello-hover: var(--bg-color-btn-dark-hover);
+
+    --spacing: 150px; /*Initial value for gap and margin-top*/
+    /* Gradient colors def*/
+    --gradient-primary: var(--gradient-primary-dark);
+}
+
+.light-mode {
+    /* Light mode colors */
+    --color-btn: var(--color-btn-light);
+    --bg-color-btn: var(--color-btn-light-hover);
+    /*jello*/
+    --color-jello: var(--bg-color-btn-dark);
+    --color-jello-hover: var(--color-jello-bace);
+    /*main color*/
+    --color-mode: var(--color-light-mode);
+    --color-invers-mode: var(--color-dark-mode);
+    /* Gradient colors light*/
+    --gradient-primary: var(--gradient-primary-light);
+
+    --color-background-primary: #ffffff; /* Main light background color */
+    --color-background-secondary: #f5f5f5; /* Secondary light background for additional elements */
+    --color-text-primary: #000000; /* Main text color for high contrast */
+    --color-text-secondary: #333333; /* Secondary text color for less emphasis */
+
+    /* Border and shadow colors for light mode */
+    --color-border: #dcdcdc; /* Border color for elements */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Lighter shadow for depth effect */
+}
+
+body {
+    background-color: var(--color-mode);
+    font-family: 'Orbitron', sans-serif;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-mode);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-btn-light-2);
+}
+
+
