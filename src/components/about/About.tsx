@@ -21,7 +21,6 @@ const About: React.FC = () => {
                     src="../../images/Me.png"
                     alt="My description"
                     placeholder="blurred"
-                    // min-width={300}
                     max-width={500}
                     quality={100}
                     layout="constrained"
