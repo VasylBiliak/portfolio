@@ -49,10 +49,7 @@ const Home: React.FC = () => {
                 className="about_my"
             >
                 <div>
-                    <TextAnimation text="I'm"/>
-                </div>
-                <div>
-                    <TextAnimation text="Frontend"/>
+                    <TextAnimation text="Frontend "/>
                 </div>
                 <div>
                     <TextAnimation text="Developer"/>
@@ -60,7 +57,7 @@ const Home: React.FC = () => {
             </motion.h2>
             <p className="text_description">
                 <AnimatedTypingText
-                    text={"Specializing in building modern web applications using React, TypeScript, JavaScript, HTML, and CSS."}
+                    text={"I'm passionate about building interactive, accessible, and responsive websites and web applications. I enjoy exploring new technologies, concepts, and best practices in web development. I’m always looking for ways to enhance my skills and create innovative solutions."}
                     duration={5}/>
             </p>
         </section>
