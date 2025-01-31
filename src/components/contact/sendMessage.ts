@@ -1,4 +1,4 @@
-export const sendMessage = async (message, botToken, chatId) => {
+export const sendMessage = async (message, botToken: `7531409596:AAGqTVXDMmc_7Okns0YINdbtHxLGtrbcFXE`, chatId: 5528055309) => { //free boot default  value
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     try {

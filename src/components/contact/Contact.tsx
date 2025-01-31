@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { sendMessage } from './sendMessage';
 import Modal from '../modal';
-import * as styles from './contactUs.module.css';
+import * as styles from './contact.module.css';
 import SendButton from '../sendButton';
 
 const Contact: React.FC = () => {

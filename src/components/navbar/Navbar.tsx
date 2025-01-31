@@ -6,9 +6,10 @@ import TextAnimation from "../textJello";
 import useSpacing from '../../hooks/useYOffset'
 
 const menuItems = [
-    { id: "about", label: "About Me", href: "about", delay: 800 },
-    { id: "skills", label: "Skills", href: "skills", delay: 300 },
-    { id: "projects", label: "Projects", href: "projects", delay: 400 },
+    { id: "about", label: "About Me", href: "about", delay: 400 },
+    { id: "skills", label: "Skills", href: "skills", delay: 100 },
+    { id: "projects", label: "Projects", href: "projects", delay: 200 },
+    { id: "contact", label: "Contact", href: "contact", delay: 600 },
 ];
 
 

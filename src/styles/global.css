@@ -24,8 +24,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-        /*
-    -webkit-user-select: none;
+    /*
     Prevents the user from selecting text or elements.
     Commonly used on interactive elements like buttons to improve user experience.
 
@@ -139,7 +138,7 @@ body {
     overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {

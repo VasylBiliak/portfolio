@@ -1,7 +1,7 @@
 import React from "react";
 import { PageProps } from "gatsby";
 import Layout from "../components/Layout";
-import Contact from "../components/contactUs";
+import Contact from "../components/contact";
 import ProjectsList from "../components/projects";
 import Skills from "../components/skills";
 import About from "../components/about";
