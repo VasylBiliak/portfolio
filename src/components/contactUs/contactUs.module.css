@@ -1,15 +1,8 @@
-.contact_us__form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0 10%;
-}
-
 .contact_us__fields {
   display: grid;
   gap: 15px;
   width: calc(90vw);
-  margin: 0 10%;
+  margin: 0 5%;
 }
 
 .contact_us__field_group {
@@ -20,7 +13,7 @@
 .contact_us__textarea {
   width: 100%;
   padding: 1.4rem;
-  color: var(--color-text-secondary);
+  /*color: var(--color-text-secondary);*/
   font-size:  var(--font-size-base);
   border-radius: 5px;
   background-color: transparent;
@@ -61,9 +54,9 @@
 .contact_us__error_messages {
   color: var(--color-text-secondary);
   font-size:  var(--font-size-base);
+  display: flex;
+  align-items: center;
   text-align: center;
-  width: 60%;
-  /*height: 30px;*/
 }
 
 @media (max-width: 480px) {
@@ -86,15 +79,6 @@
     width: 900px;
   }
 
-  .contact_us__input,
-  .contact_us__textarea {
-    font-size: 22px;
-  }
-
-  .contact_us__input_error {
-    border: 2px solid #ce1414;
-  }
-
   .contact_us__textarea {
     padding: 10px;
     resize: none;
@@ -103,12 +87,7 @@
 
   .contact_us__error_messages {
     margin: 5px 10px 5px 0;
-    font-size: 1.5rem;
-  }
-
-  .contact_us__button {
-    border: none;
-    border-radius: 5px;
+    width: 80%;
   }
 }
 
