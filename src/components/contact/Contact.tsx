@@ -45,7 +45,8 @@ const Contact: React.FC = () => {
         `;
 
         try {
-            await sendMessage(message, import.meta.env.VITE_APP_TOKEN , import.meta.env.VITE_APP_ID);
+            // await sendMessage(message, import.meta.env.VITE_APP_TOKEN, import.meta.env.VITE_APP_ID);
+            await sendMessage(message);
             setModalMessage('Message sent successfully!');
             setIsModalOpen(true);
             setFormData({

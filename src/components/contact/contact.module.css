@@ -26,7 +26,10 @@
 .contact_us__input:hover,
 .contact_us__textarea:hover {
   box-shadow: 0 0 0 3px var(--bg-color-btn);
-  z-index: 10000;
+}
+
+.contact_us__input:focus {
+  background-color: transparent;
 }
 
 .contact_us__input_error {
