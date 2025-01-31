@@ -64,7 +64,7 @@ html {
     --color-background-primary: #11111b; /* Main dark background color */
     --color-background-secondary: #0a0a10; /* Secondary dark background for additional elements */
     --color-text-primary: #ffffff; /* Main text color for high contrast */
-    --color-text-secondary: #c4c4c4; /* Secondary text color for less emphasis */
+    --color-text-secondary: #e1e0e0; /* Secondary text color for less emphasis */
 
     /* Border and shadow colors */
     --color-border: #292929; /* Border color for elements */

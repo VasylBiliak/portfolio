@@ -6,10 +6,6 @@ const About: React.FC = () => {
     return (
         <div className={styles.info_dp_section}>
             <div className={styles.about_info}>
-                {/*<p tabIndex={0}>Hi! My name is Vasyl.</p>*/}
-                {/*<p tabIndex={0}>*/}
-                {/*    I'm a motivated and goal-oriented Front-End Developer with skills in React and TypeScript.*/}
-                {/*</p>*/}
                 <p tabIndex={0}>
                     In the past, I worked as a software developer for industrial controllers and created Human-Machine Interfaces (HMI panels).
                     This experience gave me a solid understanding of the importance of adaptive and user-friendly interfaces. Now, I’m a freelance
