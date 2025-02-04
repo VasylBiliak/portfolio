@@ -67,6 +67,10 @@
     flex-direction: column-reverse;
   }
 
+  .contact_us__input, .contact_us__textarea {
+    font-size:  var(--font-size-skill-title);
+  }
+
   .contact_us__error_messages {
     width: 100%;
     min-height: 60px;

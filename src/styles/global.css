@@ -44,6 +44,21 @@ html {
     scrollbar-color: #159374 transperent;
 }
 
+p, input, textarea {
+    user-select: text;
+}
+
+::selection {
+    background-color: var(--colorSVG); /* Зелений фон */
+    color: var(--color-text-primary); /* Білий текст */
+}
+
+::-moz-selection {
+    background-color: var(--colorSVG);
+    color: var(--color-text-primary);
+}
+
+
 :root {
     --font-title: 'Raleway', sans-serif;
     --font-primary: 'Roboto', sans-serif;
@@ -80,8 +95,8 @@ html {
     --color-background-transparent: transparent;
 
     /*    Color for svg*/
-    --lightSkyBlue: #0b5959;
-    --darkTeal: #31bebe;
+    --lightSkyBlue: #2ac0c0;
+    --darkTeal: #0b5959;
 
 /*    hover btn*/
     --color-hover-background: #0f7878;
@@ -113,7 +128,7 @@ html {
     --gradient-primary: var(--gradient-primary-dark);
 
     /*    Color for svg*/
-    --colorSVG: var(--lightSkyBlue);
+    --colorSVG: var(--darkTeal);
 }
 
 .light-mode {
@@ -130,7 +145,7 @@ html {
     --gradient-primary: var(--gradient-primary-light);
 
     /*    Color for svg*/
-    --colorSVG: var(--darkTeal);
+    --colorSVG: var(--lightSkyBlue);
 
     --color-background-primary: #ffffff; /* Main light background color */
     --color-background-secondary: #f5f5f5; /* Secondary light background for additional elements */
