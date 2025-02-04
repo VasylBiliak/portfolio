@@ -70,6 +70,7 @@
 
     .background_image, .mirrored_svg {
         width: 50vw;
+        height: 100%;
     }
     .mirrored_svg {
         display: block;

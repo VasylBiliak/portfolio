@@ -48,7 +48,7 @@ const MySVG: React.FC<MySVGProps> = ({
             <line x1="-526" y1="384.5" x2="1394.1" y2="384.5" stroke={stroke} strokeWidth={strokeWidth} strokeOpacity="0.42"/>
             <line x1="-525.999" y1="284.5" x2="1394" y2="287.5" stroke={stroke} strokeWidth={strokeWidth} strokeOpacity="0.42"/>
             <line x1="-525.997" y1="184.5" x2="1394" y2="194.5" stroke={stroke} strokeWidth={strokeWidth} strokeOpacity="0.42"/>
-            <ellipse cx="705.5" cy="711" rx="4.5" ry="4" fill="#D9D9D9"/>
+            <ellipse cx="705.5" cy="711" rx="4.5" ry="4" fill={stroke}  />
         </g>
         <defs>
             <filter id="filter0_d_18_43" x="0" y="0" width="1400" height="1422" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
