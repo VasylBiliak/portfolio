@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                 </div>
                 <div className="mobiletogglemenu" id="mobiletogglemenu">
                     <ul className="mobile-navbar-tabs-ul" id="mobile-ul">
-                        <li className="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+                        <li className="navbar-tabs-li" >
                             <ThemeSwitcher toggleMenuVisibility={toggleMenuVisibility} />
                         </li>
                         {renderMenuItems(true)}
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
                 </div>
                 <div className="navbar-tabs" id="navbar-tabs">
                     <ul className="navbar-tabs-ul">
-                        <li className="navbar-tabs-li theme" data-aos="fade-down" data-aos-delay="100">
+                        <li className="navbar-tabs-li theme">
                             <ThemeSwitcher toggleMenuVisibility={toggleMenuVisibility} />
                         </li>
                         {renderMenuItems(false)}

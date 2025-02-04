@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
             />
             <form className={styles.contact_us__fields} id="contactForm" noValidate="novalidate">
                 <input
-                    className={`${styles.contact_us__input} ${errorMessages ? styles['contact_us__input--error'] : ''}`}
+                    className={`${styles.contact_us__input}`}
                     id="email"
                     type="email"
                     placeholder="Your Email *"
@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
                     onChange={handleInputChange}
                 />
                 <textarea
-                    className={`${styles.contact_us__textarea} ${errorMessages ? styles['contact_us__input--error'] : ''}`}
+                    className={`${styles.contact_us__textarea}`}
                     id="message"
                     value={formData.message}
                     onChange={handleInputChange}

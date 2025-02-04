@@ -17,7 +17,7 @@ p {
 }
 
 .content {
-    max-width: 900px;
+    max-width: 1024px;
     height: 100%;
     display: grid;
     gap: var(--spacing);
@@ -202,9 +202,6 @@ p {
     .home {
         margin: 0;
     }
-    .text-content {
-        /*justify-content: flex-start;*/
-    }
 }
 
 @media screen and (max-width: 430px) {
@@ -217,9 +214,6 @@ p {
     html {
         font-size: 42%;
     }
-    /*.dp img {*/
-    /*    width: 200px;*/
-    /*}*/
 }
 
 @media screen and (max-width: 300px) {

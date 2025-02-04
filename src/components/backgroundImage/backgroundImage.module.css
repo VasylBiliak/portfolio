@@ -1,0 +1,79 @@
+
+.background_container {
+    position: fixed !important;
+    background-size: cover !important;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr auto;
+}
+
+.background_second {
+    background-size: cover !important;
+    width: 30vw;
+    height: 30vw;
+    min-height: 200px;
+    min-width: 200px;
+
+    top: 150px;
+    right: -1px;
+
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+}
+
+.background_wrapper {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.background_image {
+    width: 70vw;
+    height: 70vw;
+    min-height: 200px;
+    min-width: 200px;
+}
+
+@media (max-width: 600px) {
+    .background_image {
+        width: 100vw;
+        height: 100vw;
+    }
+}
+
+.mirrored_svg {
+    display: none;
+    transform: scaleX(-1);
+    width: 70vw;
+    height: 70vw;
+    min-height: 200px;
+    min-width: 200px;
+}
+
+
+
+@media (min-width: 2000px) {
+    .background_wrapper {
+        width: auto;
+        display: flex;
+    }
+    .background_image {
+        order: 2;
+    }
+
+
+    .background_image, .mirrored_svg {
+        width: 50vw;
+    }
+    .mirrored_svg {
+        display: block;
+        order: 1;
+    }
+}
+

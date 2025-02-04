@@ -246,9 +246,7 @@ header {
 
 @media screen and (max-width: 375px) {
     .mobile-navbar-tabs-ul {
-        /*flex-direction: column;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
+        gap: 10px;
     }
 }
 

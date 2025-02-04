@@ -21,6 +21,10 @@ const FadeInOnScroll: React.FC<FadeInOnScrollProps> = ({ children }) => {
         visible: {opacity: 1, y: -useSpacing(),},
     };
 
+    // if (spacing < 20) {
+    //     return  ({children})
+    // }
+
     return (
         <motion.div
             className={`${styles.container}`}
@@ -28,8 +32,8 @@ const FadeInOnScroll: React.FC<FadeInOnScrollProps> = ({ children }) => {
             initial="hidden"
             whileInView="visible"
             variants={animationVariants}
-            transition={{ ease: 'easeOut', duration: 0.5 }}
-            viewport={{ once: false, amount: 0.2 }}
+            transition={{ ease: 'easeOut', duration: 0.8 }}
+            viewport={{ once: false, amount: 0.1 }}
             key={children ? Math.random() : null}
         >
             {children}
