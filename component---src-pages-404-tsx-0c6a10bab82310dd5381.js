@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkvasyl_biliak_portfolio=self.webpackChunkvasyl_biliak_portfolio||[]).push([[453],{731:function(a,e,i){i.r(e);var l=i(6540),f=i(4794);e.default=a=>{l.useEffect((()=>{(0,f.navigate)("/")}),[])}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-0c6a10bab82310dd5381.js.map
