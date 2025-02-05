@@ -10,21 +10,21 @@ const TitImage: React.FC = () => (
             eyeStyle={{
                 boxShadow: "inset 0 0 5px rgba(11, 58, 20, 0.18)",
                 position: "absolute",
-                left: "24.4%",
-                top: "11.5%",
-                width: "4.8%",
-                height: "4.8%",
+                left: "19.03%",
+                top: "9.95%",
+                width: "4.6%",
+                height: "4.6%",
                 borderRadius: "50%",
             }}
             pupilStyle={{
-                width: "62%",
-                height: "62%",
+                width: "55%",
+                height: "55%",
                 background: "var(#095E5EFF)",
                 borderRadius: "50%",
             }}
         />
         <StaticImage
-            src="../../images/svg/TIT.svg"
+            src="../../images/svg/TIT-2.svg"
             alt="Tit"
             placeholder="blurred"
             max-width={500}
