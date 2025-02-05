@@ -17,13 +17,13 @@ const TextAnimation: React.FC<TextAnimationProps> = ({ text,  textGap = "0rem" }
             }}
         >
             {text.split("").map((char, index) => (
-                <p
+                <span
                     key={index}
                     className={styles.jello} // Adds animation class for each character
                     style={{ whiteSpace: char === " " ? "pre" : undefined }} // Preserves spaces
                 >
                     {char === " " ? "\u00A0" : char} {/* Renders a non-breaking space for empty spaces */}
-                </p>
+                </span>
             ))}
         </div>
     );

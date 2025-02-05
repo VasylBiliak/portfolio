@@ -18,9 +18,11 @@
 }
 
 .skill p {
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     font-family: var(--font-title);
     font-size: var(--font-size-skill-title);
     text-align: center;
     font-weight: bold;
+    background-color: var(--color-bg-section-el);
+    border-radius: 2px;
 }

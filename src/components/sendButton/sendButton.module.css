@@ -1,0 +1,31 @@
+.send_button {
+    background-color: transparent;
+    color: var(--btn-text);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 1px 3px 6px 2px var(--btn-text);
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.send_button:hover {
+    background-color: var(--btn-text);
+    color: var(--btn-bg);
+    box-shadow: 3px 8px 8px 3px var(--btn-text);
+}
+
+
+@media (min-width: 480px) {
+    .send_button {
+        padding: 5px 10px;
+    }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+}

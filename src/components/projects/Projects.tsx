@@ -27,7 +27,7 @@ const Projects: React.FC = () => {
                         </p>
                         <div className={styles.box_list_buttons}>
                             <a
-                                href='https://github.com/a/fe-react-2024'
+                                href='https://github.com/VasylBiliak/fe-react-2024'
                                 target='_blank'
                                 className={styles.box_list__button}
                                 aria-label='View on GitHub'
@@ -35,7 +35,7 @@ const Projects: React.FC = () => {
                                 <FaGithub className={styles.box_list__icon} />
                             </a>
                             <a
-                                href='https://gra.github.io/fe-react-2024/'
+                                href='https://vasylbiliak.github.io/fe-react-2024/'
                                 target='_blank'
                                 className={styles.box_list__button}
                                 aria-label='Live View'
@@ -80,7 +80,7 @@ const Projects: React.FC = () => {
                                 <FaGithub className={styles.box_list__icon} />
                             </a>
                             <a
-                                href="https://vasylbiliak.github.io/torassembly/"
+                                href="https://www.torassembly.ca/"
                                 target="_blank"
                                 className={styles.box_list__button}
                                 aria-label="Live View"
@@ -123,7 +123,7 @@ const Projects: React.FC = () => {
                                 <FaGithub className={styles.box_list__icon} />
                             </a>
                             <a
-                                href="https://vasylbiliak.github.io/fe-course-basic-2023/"
+                                href="https://vasylbiliak.github.io/fe-course-basic-2023/GamesProject/index.html"
                                 target="_blank"
                                 className={styles.box_list__button}
                                 aria-label="Live View"

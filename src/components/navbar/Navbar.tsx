@@ -4,11 +4,13 @@ import ThemeSwitcher from "../themeSwitcher";
 import Hamburger from "../Hamburger";
 import TextAnimation from "../textJello";
 import useSpacing from '../../hooks/useYOffset'
+import ThemeOption from "../themeSwitcher/ThemeOption";
 
 const menuItems = [
-    { id: "about", label: "About Me", href: "about", delay: 800 },
-    { id: "skills", label: "Skills", href: "skills", delay: 300 },
-    { id: "projects", label: "Projects", href: "projects", delay: 400 },
+    { id: "about", label: "About Me", href: "about", delay: 400 },
+    { id: "skills", label: "Skills", href: "skills", delay: 100 },
+    { id: "projects", label: "Projects", href: "projects", delay: 200 },
+    { id: "contact", label: "Contact", href: "contact", delay: 600 },
 ];
 
 
@@ -77,16 +79,16 @@ const Navbar: React.FC = () => {
                 </div>
                 <div className="mobiletogglemenu" id="mobiletogglemenu">
                     <ul className="mobile-navbar-tabs-ul" id="mobile-ul">
-                        <li className="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
-                            <ThemeSwitcher toggleMenuVisibility={toggleMenuVisibility} />
+                        <li className="navbar-tabs-li" onClick={toggleMenuVisibility}>
+                            <ThemeOption />
                         </li>
                         {renderMenuItems(true)}
                     </ul>
                 </div>
                 <div className="navbar-tabs" id="navbar-tabs">
                     <ul className="navbar-tabs-ul">
-                        <li className="navbar-tabs-li theme" data-aos="fade-down" data-aos-delay="100">
-                            <ThemeSwitcher toggleMenuVisibility={toggleMenuVisibility} />
+                        <li className="navbar-tabs-li theme" onClick={toggleMenuVisibility}>
+                            <ThemeOption />
                         </li>
                         {renderMenuItems(false)}
                     </ul>

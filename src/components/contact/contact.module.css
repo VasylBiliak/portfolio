@@ -1,0 +1,118 @@
+.contact_us__fields {
+  display: grid;
+  gap: 15px;
+  width: calc(90vw);
+  margin: 0 5%;
+  user-select: text;
+}
+
+.contact_us__field_group {
+  position: relative;
+}
+
+.contact_us__input,
+.contact_us__textarea {
+  width: 100%;
+  padding: 1.4rem;
+  color: var(--text-secondary);
+  font-size:  var(--font-size-xlarge);
+  border-radius: 5px;
+  /*background-color: transparent;*/
+  box-shadow: 0 0 0 1px var(--text-secondary);
+  box-sizing: border-box;
+  user-select: text;
+  background-color: var(--color-bg-section-el);
+}
+
+.contact_us__input:hover,
+.contact_us__textarea:hover {
+  box-shadow: 0 0 0 3px var(--btn-text);
+  background-color: var(--color-bg-section-el);
+}
+
+.contact_us__input:focus {
+  background-color: var(--color-bg-input-focus);
+}
+
+/* Apply styles to autofilled input fields in different states */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Create an outer glow effect around the input field */
+  box-shadow:
+          0 0 0 3px var(--btn-text), /* Outer border effect */
+          0 0 0 500px var(--color-bg-input-focus) inset !important; /* Background color filling effect */
+
+  /* Set the text color inside the autofilled input */
+  color: var(--text-secondary) !important;
+  -webkit-text-fill-color: var(--text-secondary) !important; /* Ensure text color applies correctly */
+}
+
+.contact_us__input_error {
+  box-shadow:  0 0 0 3px #ce1414;
+}
+
+.contact_us__textarea {
+  padding: 10px;
+  margin-right: 100%;
+  resize: none;
+  height: 200px;
+  box-sizing: border-box;
+}
+
+.contact_us__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 60px;
+}
+
+.contact_us__error_messages {
+  color: var(--text-secondary);
+  font-size:  var(--font-size-base);
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .contact_us__actions {
+    height: auto;
+    gap: 30px;
+    flex-direction: column-reverse;
+  }
+
+  .contact_us__input, .contact_us__textarea {
+    font-size:  var(--font-size-skill-title);
+  }
+
+  .contact_us__error_messages {
+    width: 100%;
+    min-height: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact_us__fields {
+    display: grid;
+    gap: 15px;
+    width: 900px;
+  }
+
+  .contact_us__textarea {
+    padding: 10px;
+    resize: none;
+    height: 250px;
+  }
+
+  .contact_us__error_messages {
+    margin: 5px 10px 5px 0;
+    width: 80%;
+  }
+}
+
+
+
+
+

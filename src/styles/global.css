@@ -19,13 +19,11 @@
     background: transparent;
 }
 
-
 * {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-        /*
-    -webkit-user-select: none;
+    /*
     Prevents the user from selecting text or elements.
     Commonly used on interactive elements like buttons to improve user experience.
 
@@ -43,111 +41,208 @@ html {
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    scrollbar-color: #159374 transperent;
+}
+
+p, input, textarea {
+    user-select: text;
+}
+
+::selection {
+    background-color: var(--color-green-dark); /* Зелений фон */
+    color: var(--text-primary); /* Білий текст */
+}
+
+::-moz-selection {
+    background-color: var(--color-green-dark);
+    color: var(--text-primary);
 }
 
 :root {
+    /* Font families */
     --font-title: 'Raleway', sans-serif;
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Lora', serif;
     --font-mono: 'Fira Code', monospace;
 
+    /* Font sizes */
     --font-size-small: 1.2rem;
     --font-size-skill-title: 2rem;
     --font-size-base: 2.3rem;
     --font-size-large: 2.4rem;
     --font-size-xlarge: 3.2rem;
-
     --font-size-heading: 4rem;
     --font-size-name: 6.8rem;
-
-/* Primary background and text colors */
-    --color-background-primary: #11111b; /* Main dark background color */
-    --color-background-secondary: #0a0a10; /* Secondary dark background for additional elements */
-    --color-text-primary: #ffffff; /* Main text color for high contrast */
-    --color-text-secondary: #c4c4c4; /* Secondary text color for less emphasis */
-
-    /* Border and shadow colors */
-    --color-border: #292929; /* Border color for elements */
-    --color-shadow: rgba(0, 0, 0, 0.137); /* Shadow color for depth effect */
-
-    /* Gradient colors */
-    --gradient-primary-light: linear-gradient(45deg, #074242, #074b4b, #074646, #0f7878);
-    --gradient-primary-dark: linear-gradient(45deg, #ffff00, #dede28, #0f7878, #096565);
-
-    /*--gradient-primary: linear-gradient(45deg, #053a3a, #064646, #055252, #0f7878);*/
-    --gradient-secondary: linear-gradient(90deg, #6bc6f7, #0f7575);
-
-    /*    -  background-transparent*/
-    --color-background-transparent: transparent;
-
-/*    hover btn*/
-    --color-hover-background: #0f7878;
-
-/*    mode*/
-    --color-light-mode: #d7ca91;
-    --color-dark-mode: #171717;
-
-    --color-btn-light: yellow;
-    --color-btn-light-hover: #000000;
-
-    --color-btn-light-2: #0f785c;
-
-    --bg-color-btn-dark: #000000;
-    --bg-color-btn-dark-hover: yellow;
-
-    --color-mode: var(--color-dark-mode);
-
-    --color-btn: var(--bg-color-btn-dark);
-    --bg-color-btn: var(--color-btn-light);
-
-    /*Jello text*/
-    --color-jello-bace: #159374;
-    --color-jello: var(--color-jello-bace);
-    --color-jello-hover: var(--bg-color-btn-dark-hover);
-
-    --spacing: 150px; /*Initial value for gap and margin-top*/
-    /* Gradient colors def*/
-    --gradient-primary: var(--gradient-primary-dark);
 }
 
-.light-mode {
-    /* Light mode colors */
-    --color-btn: var(--color-btn-light);
-    --bg-color-btn: var(--color-btn-light-hover);
-    /*jello*/
-    --color-jello: var(--bg-color-btn-dark);
-    --color-jello-hover: var(--color-jello-bace);
-    /*main color*/
-    --color-mode: var(--color-light-mode);
-    --color-invers-mode: var(--color-dark-mode);
-    /* Gradient colors light*/
-    --gradient-primary: var(--gradient-primary-light);
+:root {
+    /* === Base Colors === */
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray-dark: #292929;
+    --color-gray-light: #dcdcdc;
+    --color-gray-medium: #e1e0e0;
+    --color-yellow: yellow;
+    --color-blue-light: #6bc6f7;
+    --color-teal-dark: #074b4b;
+    --color-teal-medium: #159374;
+    --color-teal-light: #2deeee;
+    --color-cyan-dark: #0f8d8d;
+    --color-green-dark: #0f785c;
+    --color-green-medium: #096565;
+    --color-bg-hover: #0f7878;
+    /*    hover btn*/
+    --bg-hover: #0f7878;
+    /* Spacing */
+    --spacing: 100vh;
 
-    --color-background-primary: #ffffff; /* Main light background color */
-    --color-background-secondary: #f5f5f5; /* Secondary light background for additional elements */
-    --color-text-primary: #000000; /* Main text color for high contrast */
-    --color-text-secondary: #333333; /* Secondary text color for less emphasis */
+    /* ===== Default (Dark Theme) ======================== */
 
-    /* Border and shadow colors for light mode */
-    --color-border: #dcdcdc; /* Border color for elements */
-    --color-shadow: rgba(0, 0, 0, 0.1); /* Lighter shadow for depth effect */
+    /* Main Background Color */
+    --color-bg-main: #000000;  /* Color for background */
+    --color-bg-section-el: rgba(0, 0, 0, 0.65);
+    --color-bg-input: rgba(0, 0, 0, 0.35);
+    --color-bg-input-focus: rgba(0, 0, 0, 0.75);
+
+    --bg-primary: #11111b;
+    --bg-secondary: #0a0a10;
+    --text-primary: var(--color-white);
+    --text-secondary: var(--color-gray-medium);
+
+    /* Borders and shadows */
+    --border-color: var(--color-gray-dark);
+    --shadow-color: rgba(0, 0, 0, 0.137);
+
+    /* Buttons */
+    --btn-bg: var(--color-black);
+    --btn-text: var(--color-yellow);
+    --btn-hover-bg: var(--color-yellow);
+    --btn-hover-text: var(--color-black);
+
+
+    /* Secondary Buttons */
+    --btn-secondary-bg: var(--color-yellow);
+    --btn-secondary-bg-hover: var(--color-green-dark);
+
+    /*    drop-shadow */
+    --drop-shadow: var(--color-yellow);
+
+    /* Jello effect */
+    --jello-primary: var(--color-teal-medium);
+    --jello-hover: var(--color-teal-medium);
+
+    --color-jello: var(--jello-primary);
+    --color-jello-hover: var(--jello-hover);
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(
+            45deg,
+            #ffff00,
+            #dede28,
+            var(--color-green-medium),
+            var(--color-green-dark));
+
+    --gradient-secondary: linear-gradient(
+            90deg,
+            var(--color-blue-light),
+            #0f7575);
+    --gradient-runing-ferst: -webkit-linear-gradient(
+            135deg,
+            var(--color-green-dark),
+            var(--color-yellow),
+            var(--color-green-dark),
+            var(--color-yellow)
+    );
+    --gradient-runing-second: linear-gradient(
+            -45deg,
+            var(--color-green-dark),            var(--color-yellow),
+            var(--color-green-dark),
+            var(--color-yellow)
+    );
+
+    /* SVG */
+    --svg-color: #2eeaea;
+
+}
+
+[data-theme="light"] {
+    /*    drop-shadow */
+    --drop-shadow: var(--color-teal-medium);
+
+    /* Main Background Color */
+    --color-bg-main: #d7ca91;  /* Color for background */
+    --color-bg-section-el: rgba(215, 202, 145, 0.65);
+    --color-bg-input: rgba(255, 255, 0, 0.3);
+    --color-bg-input-focus: rgba(215, 202, 145, 0.9);
+
+    /* Light Theme */
+    --bg-primary: var(--color-white);
+    --bg-secondary: #f5f5f5;
+    --text-primary: var(--color-black);
+    --text-secondary: #333333;
+
+    /* Borders and shadows */
+    --border-color: var(--color-gray-light);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Buttons */
+    --btn-bg: var(--color-yellow);
+    --btn-text: var(--color-black);
+    --btn-hover-bg: var(--color-black);
+    --btn-hover-text: var(--color-yellow);
+
+    /* Jello effect */
+    --jello-primary: var(--color-green-medium);
+    --jello-hover: var(--color-teal-medium);
+
+    --color-jello: var(--jello-primary);
+    --color-jello-hover: var(--jello-hover);
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(45deg,
+    #074242,
+    #074b4b,
+    #0c5050,
+    #074646);
+
+    --gradient-secondary: linear-gradient(
+            90deg,
+            var(--color-blue-light),
+            #0f7575);
+    --gradient-runing-ferst: -webkit-linear-gradient(
+            135deg,
+            var(--color-green-dark),
+            var(--color-yellow),
+            var(--color-green-dark),
+            var(--color-yellow)
+    );
+    --gradient-runing-second: linear-gradient(
+            -45deg,
+            var(--color-green-dark),            var(--color-yellow),
+            var(--color-green-dark),
+            var(--color-yellow)
+    );
+
+     /*SVG */
+    /*--svg-color: rgba(61, 208, 157, 0.82);*/
+    --svg-color: rgb(107, 198, 247);
 }
 
 body {
-    background-color: var(--color-mode);
+    background-color: var(--color-bg-main);
     font-family: 'Orbitron', sans-serif;
     overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-mode);
+    background: var(--color-bg-main);
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-btn-light-2);
+    background-color: var(--jello-primary);
 }
-
-

@@ -15,8 +15,10 @@ const useSpacing = () => {
     useEffect(() => {
         // Function to update the spacing value based on the window's width
         const updateSpacing = () => {
-            if (window.innerWidth <= 500) {
-                setSpacing(30); // For small smartphones (max width 500px)
+            if (window.innerWidth <= 400) {
+                setSpacing(15); // For small smartphones (max width 400)
+            } else if (window.innerWidth <= 500) {
+                setSpacing(30); // For regular smartphones (max width 500px)
             } else if (window.innerWidth <= 768) {
                 setSpacing(50); // For regular smartphones (max width 768px)
             } else if (window.innerWidth <= 998) {

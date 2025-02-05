@@ -16,10 +16,11 @@
     font-size: var(--font-size-large);
     font-weight: 600;
     line-height: 30px;
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     word-wrap: break-word;
     text-align: justify;
     letter-spacing: 2px;
+    background-color: var(--color-bg-section-el);
 }
 
 .dp {
