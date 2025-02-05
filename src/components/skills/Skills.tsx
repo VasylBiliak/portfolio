@@ -1,8 +1,10 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaGithub, FaGitlab, FaAppStore } from 'react-icons/fa';
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaNode, FaGitAlt, FaNpm,
+    FaGithub, FaGitlab, FaAppStore } from 'react-icons/fa';
 import { AiOutlinePython } from "react-icons/ai";
 import { LiaYarn } from "react-icons/lia";
-import { SiTypescript, SiRedux, SiGatsby, SiMysql, SiMongodb, SiFirebase, SiPostgresql, SiNextdotjs, SiFlask } from 'react-icons/si';
+import { SiTypescript, SiRedux, SiGatsby, SiMysql, SiMongodb, SiFirebase,
+    SiPostgresql, SiNextdotjs, SiFlask, SiFigma  } from 'react-icons/si';
 import { MdDevices } from 'react-icons/md';
 import * as styles from "./skills.module.css";
 
@@ -17,12 +19,14 @@ const skills = [
     { color: '#ffffff', text: 'Next.js', icon: SiNextdotjs },
     { color: '#663399', text: 'Gatsby', icon: SiGatsby },
     { color: '#764abc', text: 'Redux Toolkit', icon: SiRedux },
-    { color: '#3e863d', text: 'Node.js', icon: FaNodeJs },
+    { color: '#3e863d', text: 'Node.js', icon: FaNode },
+    // { color: '#3e863d', text: 'Node.js', icon: FaNodeJs },
     { color: '#fff900', text: 'Python', icon: AiOutlinePython },
     { color: '#FFFFFFFF', text: 'Flask', icon: SiFlask },
     { color: '#336791', text: 'Postgresql', icon: SiPostgresql },
     { color: '#4479A1', text: 'MySQL', icon: SiMysql },
     { color: '#13aa52', text: 'MongoDB', icon: SiMongodb },
+    { color: '#F24E1E', text: 'Figma', icon: SiFigma },
     { color: '#ffa50f', text: 'Firebase', icon: SiFirebase },
     { color: '#f14e32', text: 'Git', icon: FaGitAlt },
     { color: '#FFFFFFFF', text: 'GitHub', icon: FaGithub },
