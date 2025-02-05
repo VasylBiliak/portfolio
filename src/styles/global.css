@@ -219,7 +219,7 @@ p, input, textarea {
     );
 
      /*SVG */
-    --svg-color: #2DEEEEFF;
+    --svg-color: rgba(61, 208, 157, 0.82);
 
 
 

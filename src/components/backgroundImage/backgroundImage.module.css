@@ -11,19 +11,24 @@
 }
 
 .background_second {
+    position: relative;
+    margin-top: 150px;
     background-size: cover !important;
     width: 30vw;
     height: 30vw;
     min-height: 200px;
     min-width: 200px;
-    top: 150px;
-    right: -1px;
-
     grid-column: 2;
     grid-row: 1;
     align-self: start;
     justify-self: end;
 }
+
+.container_svg {
+    width: 100%;
+    height: 100%;
+}
+
 
 .background_wrapper {
     display: flex;
@@ -38,10 +43,6 @@
     min-height: 200px;
     min-width: 200px;
 }
-
-/*.svg_bg {*/
-/*    filter: invert(100%) sepia(120%) saturate(200%) hue-rotate(180deg);*/
-/*}*/
 
 @media (max-width: 600px) {
     .background_image {
@@ -80,4 +81,18 @@
         order: 1;
     }
 }
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
 

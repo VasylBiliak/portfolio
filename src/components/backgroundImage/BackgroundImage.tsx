@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import MySVG from "./MySVG";
 import * as styles from "./backgroundImage.module.css";
-import OwlImage from "./OwlImage";  // Імпортуємо Owl компонент
-import TitImage from "./TitImage";  // Імпортуємо Tit компонент
+import OwlImage from "./OwlImage";
+import TitImage from "./TitImage";
 
 const BackgroundImage: React.FC = () => {
     const [colorSvg, setColorSvg] = useState<string>("");
@@ -17,7 +17,7 @@ const BackgroundImage: React.FC = () => {
 
             const theme = document.documentElement.getAttribute('data-theme');
             setIsDarkTheme(theme === "dark");
-            setStrokeWidth(theme === "dark" ? "1.5" : "1");
+            setStrokeWidth(theme === "dark" ? "1.5" : "0.8");
         };
 
         updateColorAndTheme();
