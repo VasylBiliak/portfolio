@@ -4,6 +4,7 @@ import ThemeSwitcher from "../themeSwitcher";
 import Hamburger from "../Hamburger";
 import TextAnimation from "../textJello";
 import useSpacing from '../../hooks/useYOffset'
+import ThemeOption from "../themeSwitcher/ThemeOption";
 
 const menuItems = [
     { id: "about", label: "About Me", href: "about", delay: 400 },
@@ -78,16 +79,16 @@ const Navbar: React.FC = () => {
                 </div>
                 <div className="mobiletogglemenu" id="mobiletogglemenu">
                     <ul className="mobile-navbar-tabs-ul" id="mobile-ul">
-                        <li className="navbar-tabs-li" >
-                            <ThemeSwitcher toggleMenuVisibility={toggleMenuVisibility} />
+                        <li className="navbar-tabs-li" onClick={toggleMenuVisibility}>
+                            <ThemeOption />
                         </li>
                         {renderMenuItems(true)}
                     </ul>
                 </div>
                 <div className="navbar-tabs" id="navbar-tabs">
                     <ul className="navbar-tabs-ul">
-                        <li className="navbar-tabs-li theme">
-                            <ThemeSwitcher toggleMenuVisibility={toggleMenuVisibility} />
+                        <li className="navbar-tabs-li theme" onClick={toggleMenuVisibility}>
+                            <ThemeOption />
                         </li>
                         {renderMenuItems(false)}
                     </ul>

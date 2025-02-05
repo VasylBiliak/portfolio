@@ -51,22 +51,22 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ toggleMenuVisibility }) =
     }, []);
 
     return (
-        <div className={styles.switcher}>
-            <button
-                onClick={setLightTheme}
-                className={`${styles.switcher_button} `}
-                aria-label="Enable light mode"
-            >
-                <FaSun className={`${styles.icon} ${styles.lightIcon} ${theme === 'light' ? styles.active_light : ''}`} />
-            </button>
-            <div className={styles.theme_switcher__separator}></div>
-            <button
-                onClick={setDarkTheme}
-                className={`${styles.switcher_button} `}
-                aria-label="Enable dark mode"
-            >
-                <FaMoon className={`${styles.icon} ${styles.darkIcon} ${theme === 'dark' ? styles.active_dark : ''}`} />
-            </button>
+        <div >
+            {/*<button*/}className={styles.switcher}
+            {/*    onClick={setLightTheme}*/}
+            {/*    className={`${styles.switcher_button} `}*/}
+            {/*    aria-label="Enable light mode"*/}
+            {/*>*/}
+            {/*    <FaSun className={`${styles.icon} ${styles.lightIcon} ${theme === 'light' ? styles.active_light : ''}`} />*/}
+            {/*</button>*/}
+            {/*<div className={styles.theme_switcher__separator}></div>*/}
+            {/*<button*/}
+            {/*    onClick={setDarkTheme}*/}
+            {/*    className={`${styles.switcher_button} `}*/}
+            {/*    aria-label="Enable dark mode"*/}
+            {/*>*/}
+            {/*    <FaMoon className={`${styles.icon} ${styles.darkIcon} ${theme === 'dark' ? styles.active_dark : ''}`} />*/}
+            {/*</button>*/}
         </div>
     );
 };

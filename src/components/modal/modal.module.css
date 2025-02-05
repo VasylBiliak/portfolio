@@ -13,8 +13,8 @@
 }
 
 .modal {
-    background: var(--color-mode);
-    box-shadow: 0 10px 10px var(--color-btn);
+    background: var(--color-bg-main);
+    box-shadow: 0 10px 10px var(--btn-bg);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -22,7 +22,7 @@
 }
 
 .modal p {
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     font-family: var(--font-title);
     font-size: var(--font-size-large);
 }
@@ -33,14 +33,14 @@
     cursor: pointer;
     font-family: var(--font-title);
     font-size: var(--font-size-large);
-    color: var(--color-btn);
-    background-color: var(--bg-color-btn);
+    color: var(--btn-bg);
+    background-color: var(--btn-text);
     padding: 0.5em 0.8em;
     border-radius: 0.1em;
 
 }
 
 .modal_button:hover {
-    background-color: var(--color-hover-background);
-    /*background-color: var(--color-jello-hover);*/
+    background-color: var(--bg-hover);
+    /*background-color: var(--text-jello-hover);*/
 }

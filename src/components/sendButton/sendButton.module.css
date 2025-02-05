@@ -1,20 +1,20 @@
 .send_button {
     background-color: transparent;
-    color: var(--bg-color-btn);
+    color: var(--btn-text);
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 2px;
-    box-shadow: 1px 3px 6px 2px var(--bg-color-btn);
+    box-shadow: 1px 3px 6px 2px var(--btn-text);
     text-transform: uppercase;
     cursor: pointer;
     font-weight: bold;
 }
 
 .send_button:hover {
-    background-color: var(--bg-color-btn);
-    color: var(--color-btn);
-    box-shadow: 3px 8px 8px 3px var(--bg-color-btn);
+    background-color: var(--btn-text);
+    color: var(--btn-bg);
+    box-shadow: 3px 8px 8px 3px var(--btn-text);
 }
 
 

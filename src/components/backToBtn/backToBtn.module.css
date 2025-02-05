@@ -18,14 +18,14 @@
     transform: translateY(50px);
     visibility: hidden;
     background-color: transparent;
-    color: var(--bg-color-btn);
-    box-shadow: 1px 4px 6px  var(--bg-color-btn);
+    color: var(--btn-text);
+    box-shadow: 1px 4px 6px  var(--btn-text);
 }
 
 .BackToBtn:hover {
-    background-color: var(--bg-color-btn);
-    color: var(--color-btn);
-    box-shadow: 3px 8px 8px 3px var(--bg-color-btn);
+    background-color: var(--btn-text);
+    color: var(--btn-bg);
+    box-shadow: 3px 8px 8px 3px var(--btn-text);
 }
 
 .BackToBtn.visible {

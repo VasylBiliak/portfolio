@@ -25,7 +25,7 @@ const Home: React.FC = () => {
                 variants={animationVariants}
                 initial="initial"
                 animate="animate"
-                className="greeting"
+                className="about_my"
             >
                 <TextAnimation text="I'm"/>
             </motion.h2>

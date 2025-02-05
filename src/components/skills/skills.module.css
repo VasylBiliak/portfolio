@@ -18,7 +18,7 @@
 }
 
 .skill p {
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     font-family: var(--font-title);
     font-size: var(--font-size-skill-title);
     text-align: center;

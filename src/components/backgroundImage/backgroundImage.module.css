@@ -16,7 +16,6 @@
     height: 30vw;
     min-height: 200px;
     min-width: 200px;
-
     top: 150px;
     right: -1px;
 
@@ -39,6 +38,10 @@
     min-height: 200px;
     min-width: 200px;
 }
+
+/*.svg_bg {*/
+/*    filter: invert(100%) sepia(120%) saturate(200%) hue-rotate(180deg);*/
+/*}*/
 
 @media (max-width: 600px) {
     .background_image {

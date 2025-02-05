@@ -1,61 +1,49 @@
 import React, { useEffect, useState } from "react";
 import MySVG from "./MySVG";
 import * as styles from "./backgroundImage.module.css";
-import { StaticImage } from "gatsby-plugin-image";
+import OwlImage from "./OwlImage";  // Імпортуємо Owl компонент
+import TitImage from "./TitImage";  // Імпортуємо Tit компонент
 
 const BackgroundImage: React.FC = () => {
-    const [colorSvg, setColorSvg] = useState<string>("#0B5959FF");
+    const [colorSvg, setColorSvg] = useState<string>("");
+    const [strokeWidth, setStrokeWidth] = useState<string>("0.5");
+    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
 
     useEffect(() => {
-        const updateColor = () => {
-            const rootStyles = getComputedStyle(document.documentElement);
-            const computedColor = rootStyles.getPropertyValue('--colorSVG').trim();
-            setColorSvg(computedColor);
+        const updateColorAndTheme = () => {
+            const color = getComputedStyle(document.documentElement)
+                .getPropertyValue('--svg-color').trim();
+            setColorSvg(color);
+
+            const theme = document.documentElement.getAttribute('data-theme');
+            setIsDarkTheme(theme === "dark");
+            setStrokeWidth(theme === "dark" ? "1.5" : "1");
         };
 
-        updateColor();
+        updateColorAndTheme();
 
-        const themeObserver = new MutationObserver(updateColor);
-        themeObserver.observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ['class'],
-        });
+        const observer = new MutationObserver(updateColorAndTheme);
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
-        return () => {
-            themeObserver.disconnect();
-        };
+        return () => observer.disconnect();
     }, []);
-
 
     return (
         <div className={styles.background_container}>
-            <StaticImage className={styles.background_second}
-                         src="../../images/svg/Owl.svg"
-                         // src="../../images/svg/Tit.svg"
-                         alt="My description"
-                         placeholder="blurred"
-                         max-width={500}
-                         quality={100}
-                         layout="constrained"
-            />
+            {isDarkTheme ? <OwlImage /> : <TitImage />}
             <div className={styles.background_wrapper}>
                 <div className={styles.mirrored_svg}>
-                <MySVG
-                    stroke={colorSvg}
-                    width="100%"
-                    height="100%"
-                    strokeWidth="1.5"
-                    quality={100}
-                />
-            </div>
+                    <MySVG stroke={colorSvg} width="100%"
+                           height="100%"
+                           strokeWidth={strokeWidth}
+                           quality={100} />
+                </div>
                 <div className={styles.background_image}>
-                    <MySVG
-                        stroke={colorSvg}
-                        width="100%"
-                        height="100%"
-                        strokeWidth="1.5"
-                        quality={100}
-                    />
+                    <MySVG stroke={colorSvg}
+                           width="100%"
+                           height="100%"
+                           strokeWidth={strokeWidth}
+                           quality={10} />
                 </div>
             </div>
         </div>

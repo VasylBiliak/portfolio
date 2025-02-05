@@ -19,7 +19,7 @@
     transition-duration: 0.3s;
     position: relative;
     border-radius: 30px;
-    box-shadow: 0 0 0 1px var(--color-text-secondary);
+    box-shadow: 0 0 0 1px var(--text-secondary);
     overflow: hidden;
     padding: 3rem 2rem 3rem 3rem;
     gap: 5rem;
@@ -27,7 +27,7 @@
 }
 
 .projects_list__box:hover {
-    box-shadow: 0 0 0 3px var(--bg-color-btn);
+    box-shadow: 0 0 0 3px var(--btn-text);
 }
 
 
@@ -42,7 +42,7 @@
 }
 
 .box_info__heading {
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     font-family: var(--font-title);
     font-size: var(--font-size-large);
     font-weight: bold;
@@ -51,7 +51,7 @@
 .box_info__description {
     word-wrap: break-word;
     text-align: justify;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     font-size:  var(--font-size-base);
     font-weight: 400;
     line-height: 1.5;
@@ -75,7 +75,7 @@
     justify-content: center;
     gap: 0.5rem;
     text-decoration: none;
-    color: var(--color-text-primary);
+    color: var(--text-primary);
     padding: 0.8rem 1.3rem;
     border-radius: 2px 12px;
     font-weight: 500;
@@ -87,8 +87,8 @@
 }
 
 .box_list__button:hover {
-    color: var(--bg-color-btn);
-    box-shadow: 0 0 8px 8px var(--bg-color-btn);
+    color: var(--btn-text);
+    box-shadow: 0 0 8px 8px var(--btn-text);
     transform: scale(1.05);
 }
 

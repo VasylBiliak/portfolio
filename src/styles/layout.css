@@ -1,9 +1,4 @@
 /* Layout, Home and Sections */
-body {
-    background-color: var(--color-mode);
-    font-family: 'Orbitron', sans-serif;
-    overflow-x: hidden;
-}
 
 p {
     font-family: 'Comfortaa', sans-serif;
@@ -64,20 +59,8 @@ p {
     width: fit-content;
     display: flex;
     align-items: flex-start;
-    background: -webkit-linear-gradient(
-            135deg,
-            var(--color-hover-background),
-            var(--bg-color-btn),
-            var(--color-hover-background),
-            var(--bg-color-btn)
-    );
-    background: linear-gradient(
-            -45deg,
-            var(--color-hover-background),
-            var(--bg-color-btn),
-            var(--color-hover-background),
-            var(--bg-color-btn)
-    );
+    background: var(--gradient-runing-ferst);
+    background: var(--gradient-runing-second);
     -webkit-background-clip: text;
     -webkit--webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -105,7 +88,7 @@ p {
     width: fit-content;
     display: flex;
     align-items: flex-start;
-    color: var(--color-text-secondary);
+    color: var(--text-costom-1);
     flex-wrap: wrap;
 }
 
@@ -120,7 +103,7 @@ p {
     font-weight: 400;
     letter-spacing: 2px;
     line-height: 35px;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     word-wrap: break-word;
     text-align: justify;
     font-family: 'Orbitron', sans-serif;
@@ -129,7 +112,7 @@ p {
 .base_text {
     word-wrap: break-word;
     text-align: justify;
-    color: var(--color-text-secondary);
+    color: var(--text-secondary);
     font-size:  var(--font-size-base);
     line-height: 1.5;
 }
