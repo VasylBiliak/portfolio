@@ -20,6 +20,7 @@
     word-wrap: break-word;
     text-align: justify;
     letter-spacing: 2px;
+    background-color: var(--color-bg-section-el);
 }
 
 .dp {

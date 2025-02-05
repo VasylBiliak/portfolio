@@ -76,15 +76,6 @@ p, input, textarea {
 }
 
 :root {
-    /* Spacing */
-    --spacing: 100vh;
-
-    /* Main Background Color */
-    --color-bg-main: #000000;  /* Color for background */
-
-    /*    hover btn*/
-    --bg-hover: #0f7878;
-
     /* === Base Colors === */
     --color-black: #000000;
     --color-white: #ffffff;
@@ -100,8 +91,19 @@ p, input, textarea {
     --color-green-dark: #0f785c;
     --color-green-medium: #096565;
     --color-bg-hover: #0f7878;
+    /*    hover btn*/
+    --bg-hover: #0f7878;
+    /* Spacing */
+    --spacing: 100vh;
 
-    /* === Default (Dark Theme) === */
+    /* ===== Default (Dark Theme) ======================== */
+
+    /* Main Background Color */
+    --color-bg-main: #000000;  /* Color for background */
+    --color-bg-section-el: rgba(0, 0, 0, 0.65);
+    --color-bg-input: rgba(0, 0, 0, 0.35);
+    --color-bg-input-focus: rgba(0, 0, 0, 0.75);
+
     --bg-primary: #11111b;
     --bg-secondary: #0a0a10;
     --text-primary: var(--color-white);
@@ -169,6 +171,9 @@ p, input, textarea {
 
     /* Main Background Color */
     --color-bg-main: #d7ca91;  /* Color for background */
+    --color-bg-section-el: rgba(215, 202, 145, 0.65);
+    --color-bg-input: rgba(255, 255, 0, 0.3);
+    --color-bg-input-focus: rgba(215, 202, 145, 0.9);
 
     /* Light Theme */
     --bg-primary: var(--color-white);
@@ -219,10 +224,8 @@ p, input, textarea {
     );
 
      /*SVG */
-    --svg-color: rgba(61, 208, 157, 0.82);
-
-
-
+    /*--svg-color: rgba(61, 208, 157, 0.82);*/
+    --svg-color: rgb(107, 198, 247);
 }
 
 body {

@@ -12,13 +12,13 @@ const TitImage: React.FC = () => (
                 position: "absolute",
                 left: "24.4%",
                 top: "11.5%",
-                width: "5%",
-                height: "5%",
+                width: "4.8%",
+                height: "4.8%",
                 borderRadius: "50%",
             }}
             pupilStyle={{
-                width: "45%",
-                height: "45%",
+                width: "62%",
+                height: "62%",
                 background: "var(#095E5EFF)",
                 borderRadius: "50%",
             }}
