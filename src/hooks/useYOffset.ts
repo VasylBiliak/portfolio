@@ -18,13 +18,13 @@ const useSpacing = () => {
             if (window.innerWidth <= 400) {
                 setSpacing(15); // For small smartphones (max width 400)
             } else if (window.innerWidth <= 500) {
-                setSpacing(30); // For regular smartphones (max width 500px)
+                setSpacing(50); // For regular smartphones (max width 500px)
             } else if (window.innerWidth <= 768) {
-                setSpacing(50); // For regular smartphones (max width 768px)
+                setSpacing(80); // For regular smartphones (max width 768px)
             } else if (window.innerWidth <= 998) {
-                setSpacing(80); // For tablets (max width 998px)
+                setSpacing(120); // For tablets (max width 998px)
             } else {
-                setSpacing(100); // For large screens (larger than 998px)
+                setSpacing(150); // For large screens (larger than 998px)
             }
         };
 

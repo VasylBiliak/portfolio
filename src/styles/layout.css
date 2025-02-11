@@ -60,7 +60,7 @@ p {
     display: flex;
     align-items: flex-start;
     background: var(--gradient-runing-ferst);
-    background: var(--gradient-runing-second);
+    /*background: var(--gradient-runing-second);*/
     -webkit-background-clip: text;
     -webkit--webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -88,7 +88,6 @@ p {
     width: fit-content;
     display: flex;
     align-items: flex-start;
-    color: var(--text-costom-1);
     flex-wrap: wrap;
 }
 

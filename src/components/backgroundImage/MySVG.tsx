@@ -13,7 +13,7 @@ const MySVG: React.FC<MySVGProps> = ({
                                          height = '1422',
                                          strokeWidth = '1', // Значення за замовчуванням
                                      }) => (
-    <svg width={width} height={height} viewBox="0 0 1400 1422" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width} height={height} style={{ mixBlendMode: 'difference' }} viewBox="0 0 1400 1422" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_18_43)" filter="url(#filter0_d_18_43)">
             <path d="M4 5C101.333 6.5 1021 129 382 391.5C316 418.613 -229 750 698 710.5" stroke={stroke} strokeWidth={strokeWidth} />
             <path d="M4 25C101.333 26.5 1021 149 382 411.5C316 438.613 -225.5 781.5 699 711.5" stroke={stroke} strokeWidth={strokeWidth} />

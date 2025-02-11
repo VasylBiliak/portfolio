@@ -10,6 +10,10 @@
     grid-template-rows: auto 1fr auto;
 }
 
+.background_container {
+    transition: opacity 0.3s ease-in-out;
+}
+
 .background_second {
     position: relative;
     margin-top: 150px;
