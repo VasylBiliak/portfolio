@@ -49,7 +49,7 @@ const Home: React.FC = () => {
                 className="about_my"
             >
                 <div>
-                    <TextAnimation text="Frontend "/>
+                    <TextAnimation text="Full-Stack "/>
                 </div>
                 <div>
                     <TextAnimation text="Developer"/>
@@ -57,7 +57,8 @@ const Home: React.FC = () => {
             </motion.h2>
             <p className="text_description">
                 <AnimatedTypingText
-                    text={"I'm passionate about building interactive, accessible, and responsive websites and web applications. I enjoy exploring new technologies, concepts, and best practices in web development. I’m always looking for ways to enhance my skills and create innovative solutions."}
+                    text={"I am a young enthusiast passionate about creating interactive, user-friendly, and responsive websites and web applications. I love exploring new technologies, concepts, and best practices in web development. I am always looking for ways to improve my skills and build innovative solutions."
+                }
                     duration={5}/>
             </p>
         </section>

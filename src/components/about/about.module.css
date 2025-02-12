@@ -1,4 +1,4 @@
-.info_dp_section {
+.info_section {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto;
@@ -23,7 +23,7 @@
     background-color: var(--color-bg-section-el);
 }
 
-.dp {
+.wrapper_image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 768px) {
-    .info_dp_section {
+    .info_section {
         grid-template-columns: 1fr;
     }
 

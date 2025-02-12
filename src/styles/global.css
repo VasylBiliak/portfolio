@@ -173,7 +173,7 @@ p, input, textarea {
     );
 
     /* SVG */
-    --svg-color: var(--color-blue-light);
+    --svg-color: var(--color-green-dark);
 
 }
 
@@ -241,7 +241,7 @@ p, input, textarea {
     );
 
      /*SVG */
-    --svg-color: var(--color-green-dark);
+    --svg-color: var(--color-blue-light);
 }
 
 body {

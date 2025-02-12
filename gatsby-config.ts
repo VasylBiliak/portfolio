@@ -7,9 +7,9 @@ const config: GatsbyConfig = {
   siteMetadata: {
     siteTitle: `Portfolio of Vasyl Biliak`,
     siteTitleAlt: `Portfolio of Vasyl Biliak`,
-    siteHeadline: `Showcasing the Development and Design Work of Vasyl Biliak`,
+    siteHeadline: `Showcasing the Full-Stack Development and UI/UX Expertise of Vasyl Biliak`,
     siteUrl: `https://vasylbiliak.github.io`,
-    siteDescription: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like HTML, CSS, JavaScript, TypeScript,React and Gatsby!`,
+    siteDescription: `Freelance full-stack developer with experience in creating adaptive, user-friendly interfaces and building scalable, efficient web applications using modern technologies like JavaScript, React, Node.js, and databases such as PostgreSQL, MySQL, and MongoDB.`,
     siteImage: `/portfolio/siteImg.jpg`,
     siteLanguage: `en`,
     author: `VasylBiliak`,
@@ -25,8 +25,8 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Vasyl Biliak Portfolio`,
-        short_name: `BV Portfolio`,
-        description: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like HTML, CSS, JavaScript, TypeScript,React and Gatsby!`,
+        short_name: `VB Portfolio`,
+        description: `A portfolio of Vasyl Biliak, a freelance developer specializing in frontend and backend development with cutting-edge web technologies, delivering user-centric and scalable solutions.`,
         start_url: `/portfolio`,
         background_color: `#0f7878`,
         display: `standalone`,
