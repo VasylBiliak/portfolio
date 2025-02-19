@@ -92,9 +92,10 @@ const Projects: React.FC = () => {
                             <StaticImage
                                 src='https://l-2022.github.io/superheroes-frontend/baner-site.webp'
                                 alt='Superheroes Project Preview'
-                                placeholder='blurred'
+                                placeholder="blurred"
+                                min-width={300}
                                 quality={95}
-                                layout='constrained'
+                                layout="constrained"
                             />
                         </div>
 
@@ -180,7 +181,8 @@ const Projects: React.FC = () => {
                             >
                                 <BiLinkExternal className={styles.box_list__icon} />
                             </a>
-                        </div><div className={styles.projects_list__image}>
+                        </div>
+                    <div className={styles.projects_list__image}>
                         <StaticImage
                             src="../../images/about.png"
                             alt="TorAssembly Project Logo"
