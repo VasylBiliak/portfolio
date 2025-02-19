@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Header from "../components/navbar";
 import Footer from "./Footer";
-import BackToBtn from "./backToBtn";
+import BackToTop from "./backToBtn";
 import "../styles/global.css";
 // import Helmet from "./helmet";
 import BackgroundImage from "./backgroundImage";
@@ -18,7 +18,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Header />
             <main className="content">{children}</main>
             <Footer />
-            <BackToBtn />
+            <BackToTop />
         </div>
     );
 };

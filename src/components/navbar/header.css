@@ -6,7 +6,7 @@ header {
     justify-content: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 800;
 }
 
 .navbar {
@@ -51,7 +51,7 @@ header {
 .logo_container {
     font-size: 45px;
     margin: 0 10px;
-    z-index: 1000;
+    z-index: 800;
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
 }
@@ -130,7 +130,7 @@ header {
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        z-index: 9998;
+        z-index: 1000;
         background-color: var(--gradient-secondary);
     }
     .hamburgerbase {
@@ -192,7 +192,7 @@ header {
         transition-duration: 0.3s;
     }
     .mobiletogglemenu {
-        z-index: 9910;
+        z-index: 900;
         height: 100%;
         width: 100%;
         position: fixed;
