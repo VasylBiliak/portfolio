@@ -18,7 +18,6 @@ typings/
 .cache
 **/.cache
 public
-my_components_dev
 
 .DS_Store
 jspm_packages
