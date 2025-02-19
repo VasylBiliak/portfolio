@@ -12,19 +12,19 @@ import SectionWrapper from "../components/sectionWrapper";
 const IndexPage: React.FC<PageProps> = () => {
     return (
         <Layout>
-            <Home />
-            <SectionWrapper section_id="about" title="About Me">
-                <About />
-            </SectionWrapper>
-            <SectionWrapper section_id="skills" title="Skills">
-                <Skills />
-            </SectionWrapper>
+            {/*<Home />*/}
+            {/*<SectionWrapper section_id="about" title="About Me">*/}
+            {/*    <About />*/}
+            {/*</SectionWrapper>*/}
+            {/*<SectionWrapper section_id="skills" title="Skills">*/}
+            {/*    <Skills />*/}
+            {/*</SectionWrapper>*/}
             <SectionWrapper section_id="projects" title="Projects">
                 <ProjectsList />
             </SectionWrapper>
-            <SectionWrapper section_id="contact" title="Contact">
-                <Contact />
-            </SectionWrapper>
+            {/*<SectionWrapper section_id="contact" title="Contact">*/}
+            {/*    <Contact />*/}
+            {/*</SectionWrapper>*/}
         </Layout>
     );
 };
