@@ -3,7 +3,6 @@ import MySVG from "./MySVG2";
 import * as styles from "./backgroundImage.module.css";
 import OwlImage from "./OwlImage";
 import TitImage from "./TitImage";
-import {StaticImage} from "gatsby-plugin-image";
 
 const BackgroundImage: React.FC = () => {
     const [theme, setTheme] = useState<string>("light");
@@ -37,13 +36,13 @@ const BackgroundImage: React.FC = () => {
             <div className={styles.wrapper_first_image}>
                 {theme === "light" ? <TitImage /> : <OwlImage />}
             </div>
-                <div className={styles.background_image}>
-                    <MySVG stroke={colorSvg}
-                           width="100%"
-                           height="100%"
-                           strokeWidth={strokeWidth}
-                           quality={100}
-                    />
+            <div className={styles.background_image}>
+                <MySVG stroke={colorSvg}
+                       width="100%"
+                       height="100%"
+                       strokeWidth={strokeWidth}
+                       quality={100}
+                />
             </div>
         </div>
     );
