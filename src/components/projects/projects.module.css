@@ -1,10 +1,8 @@
 .projects_wrapper  {
-    /*height: 100%;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*padding-bottom: 50px;*/
 }
 
 .projects_list {
@@ -51,9 +49,7 @@
     text-align: justify;
     color: var(--text-secondary);
     font-size:  var(--font-size-base);
-    font-weight: 400;
     line-height: 1.5;
-
 }
 
 .box_list_buttons {
@@ -140,6 +136,7 @@
     .box_info {
         grid-row: span 2;
     }
+
     .box_list_buttons {
         margin-top: 2rem;
         order: 3;

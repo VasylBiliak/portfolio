@@ -1,9 +1,8 @@
 import React from 'react';
-import * as styles from './projects.module.css';
 import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
 import { StaticImage } from 'gatsby-plugin-image';
-
+import * as styles from './projects.module.css';
 
 const Projects: React.FC = () => {
     return (
@@ -17,7 +16,7 @@ const Projects: React.FC = () => {
                         <p className={`
                             ${styles.box_info__description} 
                             ${styles.box_info__technology}`}>
-                            React, TypeScript, React Router, API, Vite, Redux Toolkit.
+                            React, TypeScript, React Router, Vite, Redux Toolkit.
                         </p>
                         <p className={styles.box_info__description} >
                             This page was developed during the 'Intro to React' course at Master's
@@ -55,7 +54,6 @@ const Projects: React.FC = () => {
                         />
                     </div>
                 </div>
-
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
@@ -64,10 +62,14 @@ const Projects: React.FC = () => {
                         <p className={`
                             ${styles.box_info__description} 
                             ${styles.box_info__technology}`}>
-                            React, TypeScript, React Router, API, Vite, Redux Toolkit.
+                            redux reactjs axios  vite
+                            HTML, CSS, JS, React, Axios, React Router, Vite.
                         </p>
                         <p className={styles.box_info__description} >
-                            A web application for searching and exploring superheroes. Users can find information about various superheroes, including their abilities, origins, and appearances. The project was developed as a frontend application with a focus on smooth UI and API integration.
+                            A web application for searching and exploring superheroes. Users can
+                            find information about various superheroes, including their abilities,
+                            origins, and appearances. The project was developed as a frontend
+                            application with a focus on smooth UI and API integration.
                         </p>
                     </div>
                     <div className={styles.box_list_buttons}>
@@ -98,13 +100,7 @@ const Projects: React.FC = () => {
                             layout="constrained"
                         />
                     </div>
-
-
                 </div>
-
-
-
-
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
@@ -113,12 +109,14 @@ const Projects: React.FC = () => {
                         <p className={`
                                 ${styles.box_info__description} 
                                 ${styles.box_info__technology}`}>
-                            TypeScript, React, Redux Toolkit, Express, PostgreSQL.
+                            HTML, CSS, JS, React, Redux Toolkit, theme-switcher, seo,  css-modules.
                         </p>
                         <p className={styles.box_info__description}>
-                            TorAssembly is a project that aims to provide secure and anonymous communication.
-                            It was developed as part of my personal project to explore advanced concepts of
-                            cryptography, networking, and distributed systems.
+                            Single-page website showcasing the company’s
+                            services and allowing service orders.
+                            Designed for performance, adaptability, and ease of use, it ensures
+                            high-quality content display across devices, optimized loading,
+                            and supports theme switching for user convenience.
                         </p></div>
                     <div className={styles.box_list_buttons}>
                         <a
@@ -149,7 +147,6 @@ const Projects: React.FC = () => {
                         />
 
                     </div>
-
                 </div>
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
@@ -157,12 +154,12 @@ const Projects: React.FC = () => {
                             FE Course Basic 2023
                         </article>
                         <p className={`${styles.box_info__description} ${styles.box_info__technology}`}>
-                            HTML, CSS, JavaScript, React.
+                            HTML, CSS, JS, bem-methodology.
                         </p>
                         <p className={styles.box_info__description}>
-                            "FE Course Basic 2023" is a course project where I learned the foundations of front-end web development.
-                            This project involves building responsive web pages with modern HTML, CSS, and JavaScript.
-                            Additionally, React was used to implement interactive components and create a dynamic user interface.
+                            This project was developed during the "Frontend Basics" course as part of my
+                            learning journey in web development. It showcases a collection of simple
+                            browser-based games built using fundamental web technologies.
                         </p></div>
                     <div className={styles.box_list_buttons}>
                         <a
@@ -191,9 +188,7 @@ const Projects: React.FC = () => {
                             quality={95}
                             layout="constrained"
                         />
-
                     </div>
-
                 </div>
             </div>
         </div>
