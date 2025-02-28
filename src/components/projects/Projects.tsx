@@ -8,6 +8,53 @@ const Projects: React.FC = () => {
     return (
         <div className={styles.projects_wrapper}>
             <div className={styles.projects_list}>
+                {/*DEMO SITE*/}
+                <div className={styles.projects_list__box}>
+                    <div className={styles.box_info}>
+                        <article className={styles.box_info__heading}>
+                            Client Demo Site
+                        </article>
+                        <p className={`
+            ${styles.box_info__description} 
+            ${styles.box_info__technology}`}>
+                            HTML, CSS Modules, JS, React,  Vite, mui-material
+                        </p>
+                        <p className={styles.box_info__description} >
+                            A demo website built to showcase a clean and modern UI with optimized performance.
+                            Developed with React, TypeScript, and Redux Toolkit, ensuring state management
+                            efficiency and smooth user experience.
+                        </p>
+                    </div>
+                    <div className={styles.box_list_buttons}>
+                        <a
+                            href='https://github.com/VasylBiliak/client-demo-site'
+                            target='_blank'
+                            className={styles.box_list__button}
+                            aria-label='View on GitHub'
+                        >
+                            <FaGithub className={styles.box_list__icon} />
+                        </a>
+                        <a
+                            href='https://vasylbiliak.github.io/client-demo-site/'
+                            target='_blank'
+                            className={styles.box_list__button}
+                            aria-label='Live View'
+                        >
+                            <BiLinkExternal className={styles.box_list__icon} />
+                        </a>
+                    </div>
+                    <div className={styles.projects_list__image}>
+                        <StaticImage
+                            src="https://raw.githubusercontent.com/VasylBiliak/client-demo-site/refs/heads/main/public/baner.png"
+                            alt="Client Demo Site Preview"
+                            placeholder="blurred"
+                            min-width={300}
+                            quality={95}
+                            layout="constrained"
+                        />
+                    </div>
+                </div>
+                {/*MASTER`S AC*/}
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
@@ -16,7 +63,7 @@ const Projects: React.FC = () => {
                         <p className={`
                             ${styles.box_info__description} 
                             ${styles.box_info__technology}`}>
-                            React, TypeScript, React Router, Vite, Redux Toolkit.
+                            React, TypeScript, React Router, Vite, Redux Toolkit
                         </p>
                         <p className={styles.box_info__description} >
                             This page was developed during the 'Intro to React' course at Master's
@@ -54,6 +101,7 @@ const Projects: React.FC = () => {
                         />
                     </div>
                 </div>
+                {/*SUPERHEROES FULL STEAK*/}
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
@@ -62,8 +110,7 @@ const Projects: React.FC = () => {
                         <p className={`
                             ${styles.box_info__description} 
                             ${styles.box_info__technology}`}>
-                            redux reactjs axios  vite
-                            HTML, CSS, JS, React, Axios, React Router, Vite.
+                            HTML, CSS, JS, React, Axios, React Router, Vite
                         </p>
                         <p className={styles.box_info__description} >
                             A web application for searching and exploring superheroes. Users can
@@ -101,6 +148,7 @@ const Projects: React.FC = () => {
                         />
                     </div>
                 </div>
+                {/*TOR ASSEMBLY*/}
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
@@ -109,7 +157,7 @@ const Projects: React.FC = () => {
                         <p className={`
                                 ${styles.box_info__description} 
                                 ${styles.box_info__technology}`}>
-                            HTML, CSS, JS, React, Redux Toolkit, theme-switcher, seo,  css-modules.
+                            HTML, CSS, JS, React, Redux Toolkit, theme-switcher, seo, css-modules
                         </p>
                         <p className={styles.box_info__description}>
                             Single-page website showcasing the company’s
@@ -148,13 +196,14 @@ const Projects: React.FC = () => {
 
                     </div>
                 </div>
+                {/*FE COURSE*/}
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
                             FE Course Basic 2023
                         </article>
                         <p className={`${styles.box_info__description} ${styles.box_info__technology}`}>
-                            HTML, CSS, JS, bem-methodology.
+                            HTML, CSS, JS, bem-methodology
                         </p>
                         <p className={styles.box_info__description}>
                             This project was developed during the "Frontend Basics" course as part of my
@@ -181,7 +230,7 @@ const Projects: React.FC = () => {
                     </div>
                     <div className={styles.projects_list__image}>
                         <StaticImage
-                            src="../../images/about.png"
+                            src="https://raw.githubusercontent.com/VasylBiliak/fe-course-basic-2023/refs/heads/main/docs/GamesProject/img/about.png"
                             alt="TorAssembly Project Logo"
                             placeholder="blurred"
                             min-width={300}
