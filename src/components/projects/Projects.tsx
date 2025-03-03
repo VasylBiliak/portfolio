@@ -3,12 +3,14 @@ import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as styles from './projects.module.css';
+import ProjectCard from "./ProjectCard";
 
 const Projects: React.FC = () => {
+
     return (
         <div className={styles.projects_wrapper}>
             <div className={styles.projects_list}>
-                {/*DEMO SITE*/}
+            {/*DEMO SITE*/}
                 <div className={styles.projects_list__box}>
                     <div className={styles.box_info}>
                         <article className={styles.box_info__heading}>
@@ -20,9 +22,10 @@ const Projects: React.FC = () => {
                             HTML, CSS Modules, JS, React,  Vite, mui-material
                         </p>
                         <p className={styles.box_info__description} >
-                            A demo website built to showcase a clean and modern UI with optimized performance.
-                            Developed with React, TypeScript, and Redux Toolkit, ensuring state management
-                            efficiency and smooth user experience.
+                            Client Demo Site is a demonstration website designed to showcase the capabilities
+                            of responsive layout and modern technology integration. The project is built using
+                            React, Vite, CSS Modules, and MUI Material, ensuring fast page loading, a flexible
+                            design, and a user-friendly UI.
                         </p>
                     </div>
                     <div className={styles.box_list_buttons}>
@@ -93,7 +96,7 @@ const Projects: React.FC = () => {
                     <div className={styles.projects_list__image}>
                         <StaticImage
                             src="../../images/Screenshot_24.png"
-                            alt="My description"
+                            alt="banner fe-react-2024"
                             placeholder="blurred"
                             min-width={300}
                             quality={95}
