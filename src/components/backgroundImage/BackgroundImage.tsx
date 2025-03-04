@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from "react";
-import MySVG from "./MySVG";
+import MySVG from "./MySVG2";
 import * as styles from "./backgroundImage.module.css";
 import OwlImage from "./OwlImage";
 import TitImage from "./TitImage";
 
 const BackgroundImage: React.FC = () => {
+    const [theme, setTheme] = useState<string>("light");
     const [colorSvg, setColorSvg] = useState<string>("");
     const [strokeWidth, setStrokeWidth] = useState<string>("0.5");
-    const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
 
     useEffect(() => {
-        const updateColorAndTheme = () => {
-            const color = getComputedStyle(document.documentElement)
-                .getPropertyValue('--svg-color').trim();
-            setColorSvg(color);
+        if (typeof window === "undefined") return; // Уникнення SSR помилок
 
-            const theme = document.documentElement.getAttribute('data-theme');
-            setIsDarkTheme(theme === "dark");
-            setStrokeWidth(theme === "dark" ? "1.5" : "0.8");
+        const updateTheme = () => {
+            const currentTheme = localStorage.getItem("theme") || document.documentElement.getAttribute("data-theme") || "light";
+            setTheme(currentTheme);
+            setStrokeWidth(currentTheme === "dark" ? "1.5" : "0.5");
+
+            const color = getComputedStyle(document.documentElement)
+                .getPropertyValue("--svg-color")
+                .trim();
+            setColorSvg(color);
         };
 
-        updateColorAndTheme();
+        updateTheme();
 
-        const observer = new MutationObserver(updateColorAndTheme);
+        const observer = new MutationObserver(updateTheme);
         observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 
         return () => observer.disconnect();
@@ -30,21 +33,16 @@ const BackgroundImage: React.FC = () => {
 
     return (
         <div className={styles.background_container}>
-            {isDarkTheme ? <OwlImage /> : <TitImage />}
-            <div className={styles.background_wrapper}>
-                <div className={styles.mirrored_svg}>
-                    <MySVG stroke={colorSvg} width="100%"
-                           height="100%"
-                           strokeWidth={strokeWidth}
-                           quality={100} />
-                </div>
-                <div className={styles.background_image}>
-                    <MySVG stroke={colorSvg}
-                           width="100%"
-                           height="100%"
-                           strokeWidth={strokeWidth}
-                           quality={10} />
-                </div>
+            <div className={styles.wrapper_first_image}>
+                {theme === "light" ? <TitImage /> : <OwlImage />}
+            </div>
+            <div className={styles.background_image}>
+                <MySVG stroke={colorSvg}
+                       width="100%"
+                       height="100%"
+                       strokeWidth={strokeWidth}
+                       quality={100}
+                />
             </div>
         </div>
     );

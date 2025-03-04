@@ -58,8 +58,8 @@ p, input, textarea {
     color: var(--text-primary);
 }
 
+/* Font families  ======================== */
 :root {
-    /* Font families */
     --font-title: 'Raleway', sans-serif;
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Lora', serif;
@@ -75,29 +75,40 @@ p, input, textarea {
     --font-size-name: 6.8rem;
 }
 
+/* === Base Colors  ======================== */
 :root {
-    /* === Base Colors === */
+
     --color-black: #000000;
     --color-white: #ffffff;
     --color-gray-dark: #292929;
     --color-gray-light: #dcdcdc;
     --color-gray-medium: #e1e0e0;
     --color-yellow: yellow;
+    --color-blue-lighter: #a3defb;
     --color-blue-light: #6bc6f7;
+    --color-blue-medium: #3ea8e4;
+    --color-blue-dark: #2b7db6;
+    --color-blue-darker: #1e5c8a;
     --color-teal-dark: #074b4b;
     --color-teal-medium: #159374;
     --color-teal-light: #2deeee;
     --color-cyan-dark: #0f8d8d;
     --color-green-dark: #0f785c;
     --color-green-medium: #096565;
-    --color-bg-hover: #0f7878;
-    /*    hover btn*/
     --bg-hover: #0f7878;
     /* Spacing */
     --spacing: 100vh;
 
-    /* ===== Default (Dark Theme) ======================== */
+    --color-beige-lighter: #ebe1b5;
+    --color-beige-light: #e1d4a0;
+    --color-beige-medium: #bfa86d;
+    --color-beige-dark: #9c8754;
+    --color-beige-darker: #7a693e;
 
+}
+
+/* ===== Default (Dark Theme) ======================== */
+:root {
     /* Main Background Color */
     --color-bg-main: #000000;  /* Color for background */
     --color-bg-section-el: rgba(0, 0, 0, 0.65);
@@ -116,8 +127,8 @@ p, input, textarea {
     /* Buttons */
     --btn-bg: var(--color-black);
     --btn-text: var(--color-yellow);
-    --btn-hover-bg: var(--color-yellow);
-    --btn-hover-text: var(--color-black);
+    --btn-hover-bg: var(--color-cyan-dark);
+    --btn-hover-text: var(--color-yellow);
 
 
     /* Secondary Buttons */
@@ -129,7 +140,7 @@ p, input, textarea {
 
     /* Jello effect */
     --jello-primary: var(--color-teal-medium);
-    --jello-hover: var(--color-teal-medium);
+    --jello-hover: var(--color-yellow);
 
     --color-jello: var(--jello-primary);
     --color-jello-hover: var(--jello-hover);
@@ -155,13 +166,14 @@ p, input, textarea {
     );
     --gradient-runing-second: linear-gradient(
             -45deg,
-            var(--color-green-dark),            var(--color-yellow),
+            var(--color-green-dark),
+            var(--color-yellow),
             var(--color-green-dark),
             var(--color-yellow)
     );
 
     /* SVG */
-    --svg-color: #2eeaea;
+    --svg-color: var(--color-blue-light);
 
 }
 
@@ -170,10 +182,10 @@ p, input, textarea {
     --drop-shadow: var(--color-teal-medium);
 
     /* Main Background Color */
-    --color-bg-main: #d7ca91;  /* Color for background */
-    --color-bg-section-el: rgba(215, 202, 145, 0.65);
+    --color-bg-main: var(--color-beige-light);  /* Color for background */
+    --color-bg-section-el: rgba(218, 206, 152, 0.65);
     --color-bg-input: rgba(255, 255, 0, 0.3);
-    --color-bg-input-focus: rgba(215, 202, 145, 0.9);
+    --color-bg-input-focus: rgba(224, 210, 156, 0.9);
 
     /* Light Theme */
     --bg-primary: var(--color-white);
@@ -188,22 +200,26 @@ p, input, textarea {
     /* Buttons */
     --btn-bg: var(--color-yellow);
     --btn-text: var(--color-black);
-    --btn-hover-bg: var(--color-black);
-    --btn-hover-text: var(--color-yellow);
+    --btn-hover-bg: var(--color-teal-dark);
+    --btn-hover-text: var(--color-blue-light);
 
     /* Jello effect */
-    --jello-primary: var(--color-green-medium);
-    --jello-hover: var(--color-teal-medium);
+    --jello-primary: var(--color-teal-medium);
+    --jello-hover: var(--color-blue-light);
 
     --color-jello: var(--jello-primary);
     --color-jello-hover: var(--jello-hover);
 
     /* Gradient */
-    --gradient-primary: linear-gradient(45deg,
-    #074242,
-    #074b4b,
-    #0c5050,
-    #074646);
+    --gradient-primary: linear-gradient(
+    45deg,
+    var(--color-teal-medium),
+    var(--color-teal-medium),
+    var(--color-blue-light),
+    var(--color-blue-light)
+
+
+    );
 
     --gradient-secondary: linear-gradient(
             90deg,
@@ -212,20 +228,20 @@ p, input, textarea {
     --gradient-runing-ferst: -webkit-linear-gradient(
             135deg,
             var(--color-green-dark),
-            var(--color-yellow),
+            var(--color-blue-light),
             var(--color-green-dark),
-            var(--color-yellow)
+            var(--color-blue-light)
     );
     --gradient-runing-second: linear-gradient(
             -45deg,
-            var(--color-green-dark),            var(--color-yellow),
+            var(--color-green-dark),
+            var(--color-yellow),
             var(--color-green-dark),
             var(--color-yellow)
     );
 
      /*SVG */
-    /*--svg-color: rgba(61, 208, 157, 0.82);*/
-    --svg-color: rgb(107, 198, 247);
+    --svg-color: var(--color-green-dark);
 }
 
 body {

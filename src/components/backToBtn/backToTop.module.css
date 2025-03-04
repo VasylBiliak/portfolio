@@ -13,12 +13,12 @@
     justify-content: center;
     cursor: pointer;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 1000;
+    z-index: 500;
     opacity: 0;
     transform: translateY(50px);
     visibility: hidden;
-    background-color: transparent;
-    color: var(--btn-text);
+    background-color: var(--color-bg-section-el);
+    color: var(--svg-color);
     box-shadow: 1px 4px 6px  var(--btn-text);
 }
 
@@ -28,13 +28,17 @@
     box-shadow: 3px 8px 8px 3px var(--btn-text);
 }
 
+.BackToBtn:focus {
+    outline: none;
+}
+
+
+
 .BackToBtn.visible {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
 }
-
-
 
 .BackToBtn__icon {
     font-size: 24px;

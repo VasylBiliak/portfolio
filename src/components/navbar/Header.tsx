@@ -4,7 +4,7 @@ import ThemeSwitcher from "../themeSwitcher";
 import Hamburger from "../Hamburger";
 import TextAnimation from "../textJello";
 import useSpacing from '../../hooks/useYOffset'
-import ThemeOption from "../themeSwitcher/ThemeOption";
+import ThemeOption from "../themeSwitcher/ThemeSwitcher";
 
 const menuItems = [
     { id: "about", label: "About Me", href: "about", delay: 400 },
@@ -14,7 +14,7 @@ const menuItems = [
 ];
 
 
-const Navbar: React.FC = () => {
+const Header: React.FC = () => {
     const toggleMenuVisibility = () => {
         document.body.classList.toggle("stopscrolling");
         [
@@ -99,4 +99,4 @@ const Navbar: React.FC = () => {
     );
 };
 
-export default Navbar;
+export default Header;

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { ImArrowUp } from "react-icons/im";
-import * as stules from "./backToBtn.module.css";
+import * as styles from "./backToTop.module.css";
 
-const BackToBtn: React.FC = () => {
+const BackToTop: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
+        setIsVisible(false)
     };
 
     useEffect(() => {
@@ -22,13 +23,13 @@ const BackToBtn: React.FC = () => {
 
     return (
         <button
-            className={`${stules.BackToBtn } ${isVisible ? stules.visible : ""}`}
+            className={`${styles.BackToBtn} ${isVisible ? styles.visible : ""}`}
             onClick={scrollToTop}
             aria-label="Back to top"
         >
-            <ImArrowUp className={stules.BackToBtn__icon} />
+            <ImArrowUp className={styles.BackToBtn__icon} />
         </button>
     );
 };
 
-export default BackToBtn;
+export default BackToTop;

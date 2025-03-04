@@ -5,14 +5,18 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteTitle: `Portfolio`,
+    siteTitle: `Portfolio of Vasyl Biliak`,
     siteTitleAlt: `Portfolio of Vasyl Biliak`,
     siteHeadline: `Showcasing the Development and Design Work of Vasyl Biliak`,
     siteUrl: `https://vasylbiliak.github.io`,
-    siteDescription: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like React and Gatsby!`,
-    siteImage: `/static/favicons/android-chrome-512x512.png`,
+    siteDescription: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like HTML, CSS, JavaScript, TypeScript,React and Gatsby!`,
+    siteImage: `/portfolio/siteImg.jpg`,
     siteLanguage: `en`,
     author: `VasylBiliak`,
+    twitterUsername: `@vasyl_biliak`,
+    linkedin: `https://www.linkedin.com/in/vasyl-biliak-developer`,
+    github: `https://github.com/VasylBiliak`,
+    instagram: `https://www.instagram.com/vasyl_biliak`,
   },
   pathPrefix: `/portfolio`,
   trailingSlash: `always`,
@@ -22,8 +26,7 @@ const config: GatsbyConfig = {
       options: {
         name: `Vasyl Biliak Portfolio`,
         short_name: `BV Portfolio`,
-        description: `A personal portfolio by Vasyl Biliak, showcasing development and design
-         projects using modern web technologies like React and Gatsby!`,
+        description: `A personal portfolio by Vasyl Biliak, featuring modern web development and design using cutting-edge technologies like HTML, CSS, JavaScript, TypeScript,React and Gatsby!`,
         start_url: `/portfolio`,
         background_color: `#0f7878`,
         display: `standalone`,
@@ -46,7 +49,7 @@ const config: GatsbyConfig = {
           `Orbitron\:400,500,700`,
           `Comfortaa\:300,700`,
         ],
-        display: 'swap',
+        display: "swap",
       },
     },
     {
@@ -59,8 +62,12 @@ const config: GatsbyConfig = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-svg`
+    `gatsby-plugin-react-svg`,
   ].filter(Boolean) as Array<PluginRef>,
+  graphqlTypegen: {
+    typesOutputPath: `./src/types/graphql-types.d.ts`,
+    generateOnBuild: true,
+  },
 };
 
 export default config;

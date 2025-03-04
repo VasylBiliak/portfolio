@@ -1,1 +1,1 @@
-export { default } from './backToBtn';
+export { default } from './BackToTop';

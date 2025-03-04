@@ -1,18 +1,25 @@
-
 .background_container {
     position: fixed !important;
     background-size: cover !important;
     z-index: -1;
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.wrapper_first_image {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .background_second {
     position: relative;
-    margin-top: 150px;
+    top: 150px;
     background-size: cover !important;
     width: 30vw;
     height: 30vw;
@@ -27,72 +34,36 @@
 .container_svg {
     width: 100%;
     height: 100%;
-}
-
-
-.background_wrapper {
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+    flex: var(--svg-color);
 }
 
 .background_image {
-    width: 70vw;
-    height: 70vw;
-    min-height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     min-width: 200px;
+    max-width: 75vw;
+    min-height: 200px;
+    max-height: 95vh;
+    object-fit: fill;
+
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .background_image {
-        width: 100vw;
-        height: 100vw;
+        width: 75%;
     }
 }
 
-.mirrored_svg {
-    display: none;
-    transform: scaleX(-1);
-    width: 70vw;
-    height: 70vw;
-    min-height: 200px;
-    min-width: 200px;
-}
+@media (min-width: 2300px) {
 
+    .background_image {
+        width: 90%;
+    }
 
-
-@media (min-width: 2000px) {
-    .background_wrapper {
+    .background_second {
         width: auto;
-        display: flex;
-    }
-    .background_image {
-        order: 2;
-    }
-
-
-    .background_image, .mirrored_svg {
-        width: 50vw;
-        height: 100%;
-    }
-    .mirrored_svg {
-        display: block;
-        order: 1;
+        height: auto;
     }
 }
-
-.container {
-    position: relative;
-    display: inline-block;
-}
-
-
-
-
-
-
-
-
-
-
