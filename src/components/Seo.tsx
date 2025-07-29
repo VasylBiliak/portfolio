@@ -29,7 +29,8 @@ const Seo = () => {
             <meta property="og:type" content="website" />
             <meta property="og:title" content={siteMetadata.siteTitle} />
             <meta property="og:description" content={siteMetadata.siteDescription} />
-            <meta property="og:url" content={siteMetadata.siteUrl} />
+            {/*<meta property="og:url" content={siteMetadata.siteUrl} />*/}
+            <meta property="og:url" content="https://vasylbiliak.github.io/portfolio/" />
             <meta property="og:image" content={imageUrl} />
             <meta property="og:image:secure_url" content={imageUrl} />
             <meta property="og:image:width" content="1200" />
