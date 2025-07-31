@@ -15,18 +15,43 @@ const menuItems = [
 
 
 const Header: React.FC = () => {
+    // const toggleMenuVisibility = () => {
+    //     document.body.classList.toggle("stopscrolling");
+    //     [
+    //         "mobiletogglemenu",
+    //         "burger-bar1",
+    //         "burger-bar2",
+    //         "burger-bar3",
+    //     ].forEach((id) => {
+    //         const element = document.getElementById(id);
+    //         if (element) element.classList.remove("show-toggle-menu", "hamburger-animation1", "hamburger-animation2", "hamburger-animation3");
+    //     });
+    // };
     const toggleMenuVisibility = () => {
-        document.body.classList.toggle("stopscrolling");
-        [
-            "mobiletogglemenu",
-            "burger-bar1",
-            "burger-bar2",
-            "burger-bar3",
-        ].forEach((id) => {
-            const element = document.getElementById(id);
-            if (element) element.classList.remove("show-toggle-menu", "hamburger-animation1", "hamburger-animation2", "hamburger-animation3");
-        });
+        const menu = document.getElementById("mobiletogglemenu");
+        const bar1 = document.getElementById("burger-bar1");
+        const bar2 = document.getElementById("burger-bar2");
+        const bar3 = document.getElementById("burger-bar3");
+
+        const isOpen = menu?.classList.contains("show-toggle-menu");
+
+        if (isOpen) {
+            // Close menu
+            document.body.classList.remove("stopscrolling");
+            menu?.classList.remove("show-toggle-menu");
+            bar1?.classList.remove("hamburger-animation1");
+            bar2?.classList.remove("hamburger-animation2");
+            bar3?.classList.remove("hamburger-animation3");
+        } else {
+            // Open menu
+            document.body.classList.add("stopscrolling");
+            menu?.classList.add("show-toggle-menu");
+            bar1?.classList.add("hamburger-animation1");
+            bar2?.classList.add("hamburger-animation2");
+            bar3?.classList.add("hamburger-animation3");
+        }
     };
+
     const yOffset1 = useSpacing();
 
     const handleScroll = (href: string) => {

@@ -9,24 +9,32 @@ interface QRCodeProps {
 
 const QRCode: React.FC<QRCodeProps> = ({ repoUrl }) => {
     const [fgColor, setFgColor] = useState("#000");
-    const [gfColor, setGfColor] = useState("#000");
+    const [gfColor, setGfColor] = useState("#ffffff");
     const [bgColor, setBgColor] = useState("transparent");
     const [isHovered, setIsHovered] = useState(false);
     const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const [qrSize, setQrSize] = useState("50vw");
 
     useEffect(() => {
-        if (typeof window === "undefined") return;
+        const updateQrSize = () => {
+            const width = window.innerWidth;
+            if (width > 1256) {
+                setQrSize("40vh");
+            } else {
+                setQrSize("50vw");
+            }
+        };
+        updateQrSize();
 
         const updateColors = () => {
             const rootStyles = getComputedStyle(document.documentElement);
-            const fg = rootStyles.getPropertyValue("--text-primary").trim() || "#000";
-            const gf = rootStyles.getPropertyValue("--btn-text").trim() || "#ffffff";
+            const fg = rootStyles.getPropertyValue("--text-primary").trim() || fgColor;
+            const gf = rootStyles.getPropertyValue("--btn-text").trim() || gfColor;
             const bg = rootStyles.getPropertyValue("--color-bg-section-el").trim() || "transparent";
             setFgColor(fg);
             setGfColor(gf);
             setBgColor(bg);
         };
-
         updateColors();
 
         const observer = new MutationObserver(updateColors);
@@ -35,19 +43,19 @@ const QRCode: React.FC<QRCodeProps> = ({ repoUrl }) => {
             attributeFilter: ["data-theme"],
         });
 
-        const handleScroll = () => {
-            const scrollThreshold = window.innerHeight * 0.05;
-            if (window.scrollY > scrollThreshold) {
-                setIsHovered(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            observer.disconnect();
-            window.removeEventListener("scroll", handleScroll);
-        };
+        // const handleScroll = () => {
+        //     const scrollThreshold = window.innerHeight * 0.5;
+        //     if (window.scrollY > scrollThreshold) {
+        //         setIsHovered(false);
+        //     }
+        // };
+        //
+        // window.addEventListener("scroll", handleScroll);
+        //
+        // return () => {
+        //     observer.disconnect();
+        //     window.removeEventListener("scroll", handleScroll);
+        // };
     }, []);
 
     const handleMouseEnter = () => {
@@ -74,7 +82,7 @@ const QRCode: React.FC<QRCodeProps> = ({ repoUrl }) => {
                 <QRCodeCanvas
                     value={repoUrl}
                     size={512}
-                    style={{ width: "50vw", height: "50vw" }}
+                    style={{ width: qrSize, height: qrSize }}
                     bgColor={bgColor}
                     fgColor={fgColor}
                     includeMargin={false}
