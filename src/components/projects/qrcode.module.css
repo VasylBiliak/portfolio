@@ -1,0 +1,29 @@
+.qr_wrapper {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.qr_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    border-radius: 8px 50px;
+    background-color: var(--color-bg-main);
+    box-shadow: 0 0 8px 8px var(--btn-text);
+    animation: fadeIn 0.2s ease;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

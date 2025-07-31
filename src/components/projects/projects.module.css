@@ -58,6 +58,7 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
+    z-index: 1100;
 }
 
 .box_list__button {
@@ -77,10 +78,12 @@
     font-size: 4rem;
 }
 
-.box_list__button:hover {
-    color: var(--btn-text);
-    box-shadow: 0 0 8px 8px var(--btn-text);
-    transform: scale(1.05);
+@media (hover: hover) and (pointer: fine) {
+    .box_list__button:hover {
+        color: var(--btn-text);
+        box-shadow: 0 0 8px 8px var(--btn-text);
+        transform: scale(1.05);
+    }
 }
 
 .projects_list__image {

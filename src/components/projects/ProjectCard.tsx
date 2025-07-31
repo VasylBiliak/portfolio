@@ -2,9 +2,10 @@ import React, { useEffect, useState, ReactNode } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
 import * as styles from './projects.module.css';
+import QRCode from "@components/projects/QRCode";
 
 interface ProjectCardProps {
-    repoUrl: string;
+    repoUrl?: string;
     projectName: string;
     image: ReactNode;
     description?: string;
@@ -14,21 +15,27 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
                                                      repoUrl,
+                                                     externalUrl,
                                                      projectName,
                                                      image,
                                                      description: propDescription,
                                                      technologies: propTechnologies,
-                                                     externalUrl
                                                  }) => {
     const [description, setDescription] = useState(propDescription || 'Fetching description...');
-    const [technologies, setTechnologies] = useState(propTechnologies || 'Fetching technologies...');
+    const [technologies, setTechnologies] = useState(propTechnologies || 'HTML, CSS, JS...');
 
     useEffect(() => {
-        if (propDescription && propTechnologies) return;
+        if ((!repoUrl || (!repoUrl.includes("github.com"))) || (propDescription && propTechnologies)) return;
+
+        // Витягуємо "user/repo" з URL
+        const match = repoUrl.match(/github\.com\/([^/]+\/[^/]+)/);
+        const githubPath = match?.[1];
+
+        if (!githubPath) return;
 
         async function fetchRepoData() {
             try {
-                const response = await fetch(`https://api.github.com/repos/${repoUrl}`);
+                const response = await fetch(`https://api.github.com/repos/${githubPath}`);
                 if (!response.ok) throw new Error("Failed to fetch repository data");
 
                 const data = await response.json();
@@ -36,20 +43,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 setTechnologies(propTechnologies || data.topics?.join(', ') || "No technologies listed");
             } catch (error) {
                 console.error(error);
-                setDescription("Failed to load description");
                 setTechnologies("Failed to load technologies");
+                setDescription("Failed to load description");
+
             }
         }
 
         fetchRepoData();
-    }, [repoUrl]);
-
-    const getGitHubPagesUrl = () => {
-        const [username, repo] = repoUrl.split("/");
-        return `https://${username}.github.io/${repo}/`;
-    };
-
-
+    }, [repoUrl, propDescription, propTechnologies]);
 
     return (
         <div className={styles.projects_list__box}>
@@ -62,23 +63,34 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
             <div className={styles.box_list_buttons}>
                 <div className={styles.box_list_buttons}>
-                    <a
-                        href={`https://github.com/${repoUrl}`}
-                        target="_blank"
-                        className={styles.box_list__button}
-                        aria-label="View Project">
-                        <FaGithub className={styles.box_list__icon} />
-                    </a>
-                    <a
-                        href={externalUrl ? externalUrl : getGitHubPagesUrl()}
-                        target="_blank"
-                        className={styles.box_list__button}
-                        aria-label={externalUrl ? 'Live Demo' : 'GitHub Pages'}>
-                        <BiLinkExternal className={styles.box_list__icon} />
-                    </a>
+                    {repoUrl && (
+                        <a
+                            href={repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.box_list__button}
+                            aria-label="View Project"
+                        >
+                            <FaGithub className={styles.box_list__icon} />
+                        </a>
+                    )}
+                    {externalUrl && (
+                        <>
+                            <a
+                                href={externalUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.box_list__button}
+                                aria-label="Live Demo"
+                            >
+                                <BiLinkExternal className={styles.box_list__icon} />
+                            </a>
+                            <div className={styles.box_list__button}>
+                                <QRCode repoUrl={externalUrl} />
+                            </div>
+                        </>
+                    )}
                 </div>
-
-
             </div>
             <div className={styles.projects_list__image}>{image}</div>
         </div>
