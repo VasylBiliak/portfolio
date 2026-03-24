@@ -10,7 +10,7 @@ const ProjectCard: React.FC<Project> = ({
                                                      repoUrl,
                                                      externalUrl,
                                                      projectName,
-                                                     image,
+                                                     // image, {/*<div className={styles.projects_list__image}>{image}
                                                      description: propDescription,
                                                      technologies: propTechnologies,
                                                  }) => {
@@ -46,48 +46,53 @@ const ProjectCard: React.FC<Project> = ({
     }, [repoUrl, propDescription, propTechnologies]);
 
     return (
-        <div className={styles.projects_list__box}>
-            <div className={styles.box_info}>
-                <article className={styles.box_info__heading}>{projectName}</article>
+        <div className={styles.card}>
+            <div className={styles.card__content}>
+                <article className={styles.card__title}>
+                    {projectName}
+                </article>
 
-                <p className={styles.box_info__description}>{description}</p>
-                <p className={`${styles.box_info__description} ${styles.box_info__technology}`}>
-                {technologies}
-            </p>
-            </div>
-            {/*<div className={styles.projects_list__image}>{image}</div>*/}
-            <div className={styles.box_list_buttons}>
-                <div className={styles.box_list_buttons}>
-                    {repoUrl && (
-                        <a
-                            href={repoUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.box_list__button}
-                            aria-label="View Project"
-                        >
-                            <FaGithub className={styles.box_list__icon} />
-                        </a>
-                    )}
+                <p className={styles.card__description}>
+                    {description}
+                </p>
+                <p className={`${styles.card__description} ${styles.card__technologies}`}>
+                    {technologies}
+                </p>
+
+                <div className={styles.card__actionsWrapper}>
+                    <div className={styles.card__actions}>
                     {externalUrl && (
                         <>
                             <a
                                 href={externalUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={styles.box_list__button}
+                                className={styles.card__button}
                                 aria-label="Live Demo"
                             >
-                                <BiLinkExternal className={styles.box_list__icon} />
+                                <BiLinkExternal className={styles.card__icon} />
                             </a>
-                            <div className={styles.box_list__button}>
+
+                            <div className={styles.card__button}>
                                 <QRCode repoUrl={externalUrl} />
                             </div>
                         </>
                     )}
+
+                    {repoUrl && (
+                        <a
+                            href={repoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.card__button}
+                            aria-label="View Project"
+                        >
+                            <FaGithub className={styles.card__icon} />
+                        </a>
+                    )}
+                </div>
                 </div>
             </div>
-
         </div>
     );
 };

@@ -19,9 +19,9 @@
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
     .projects_list {
-        /*grid-template-columns: repeat(3, 1fr);*/
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
 }

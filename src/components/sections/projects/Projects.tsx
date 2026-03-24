@@ -1,8 +1,7 @@
 import React from 'react';
-
-import * as styles from './projects.module.css';
 import ProjectCard from '@/components/ui/card/ProjectCard';
 import { projects } from '@/data/projects'
+import * as styles from './projects.module.css';
 
 const Projects: React.FC = () => {
     return (
@@ -16,14 +15,14 @@ const Projects: React.FC = () => {
                         projectName={project.projectName}
                         description={project.description}
                         technologies={project.technologies}
-                        image={
-                            <img
-                                src={project.image || "/default-project.png"}
-                                alt={project.projectName || "/default-project.png"}
-                                className="w-full h-auto"
-                                loading="lazy"
-                            />
-                        }
+                        // image={
+                        //     <img
+                        //         src={project.image || "/default-project.png"}
+                        //         alt={project.projectName || "/default-project.png"}
+                        //         className="w-full h-auto"
+                        //         loading="lazy"
+                        //     />
+                        // }
                     />
                 ))}
             </div>

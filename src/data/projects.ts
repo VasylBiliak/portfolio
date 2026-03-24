@@ -7,7 +7,7 @@ export interface Project {
     externalUrl?: string;
     description: string;
     technologies: string;
-    image?: string;
+    // image?: string;
 }
 
 export const projects: Project[] = [
@@ -18,7 +18,7 @@ export const projects: Project[] = [
         description:
             'Client Demo Site is a demonstration website designed to showcase responsive layout and modern technologies.',
         technologies: 'React, Vite, CSS Modules, MUI',
-        image: 'https://raw.githubusercontent.com/VasylBiliak/client-demo-site/refs/heads/main/public/baner.png',
+        // image: 'https://raw.githubusercontent.com/VasylBiliak/client-demo-site/refs/heads/main/public/baner.png',
     },
     {
         projectName: 'React Application',
@@ -27,7 +27,7 @@ export const projects: Project[] = [
         description:
             'Project built during Intro to React course with mentorship support.',
         technologies: 'React, Vite, CSS Modules, MUI',
-        image: `${BASE_URL}/images/projectImg/Screenshot_24.png`
+        // image: `${BASE_URL}/images/projectImg/Screenshot_24.png`
 
     },
     {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
         description:
             'Single-page website showcasing services and allowing service orders with responsive UI and theme switching.',
         technologies: 'React, Redux Toolkit, CSS Modules',
-        image: `${BASE_URL}/images/projectImg/tor_assembly.png`,
+        // image: `${BASE_URL}/images/projectImg/tor_assembly.png`,
     },
     {
         projectName: 'Restaurant QR Menu',
@@ -45,7 +45,7 @@ export const projects: Project[] = [
         description:
             'Dynamic web app for restaurants with QR menu, animations, and interactive dish selection.',
         technologies: 'React, Vite, CSS Modules',
-        image: 'https://l-2022.github.io/menu/banner.png',
+        // image: 'https://l-2022.github.io/menu/banner.png',
     },
     {
         projectName: 'Restaurant Menu App',
@@ -55,9 +55,8 @@ export const projects: Project[] = [
             'https://restaurant-menu-app-nextjs-eqla.vercel.app/',
         description:
             'Modern restaurant web app with interactive menu, SEO optimization, and responsive UI.',
-        technologies: 'Next.js, TypeScript, Tailwind CSS',
-        image:
-            `${BASE_URL}/images/projectImg/restaurant-menu-app-nextjs.png`,
+        technologies: 'Next.js, TypeScript, Tailwind CSS, HTML, Vercel',
+        // image: `${BASE_URL}/images/projectImg/restaurant-menu-app-nextjs.png`,
     },
     {
         projectName: 'Job Board Platform',
@@ -66,17 +65,16 @@ export const projects: Project[] = [
         externalUrl: 'https://job-board-auth-refactor.vercel.app/',
         description:
             'Job board web app with authentication, filtering, and modern UI for real-world usage.',
-        technologies: 'Next.js, TypeScript, Tailwind, Auth',
-        image: `${BASE_URL}/images/projectImg/job-board-preview.png`
+        technologies: 'Next.js, TypeScript, Tailwind CSS, Auth, Vercel',
+        // image: `${BASE_URL}/images/projectImg/job-board-preview.png`
     },
     {
         projectName: 'Restaurant Landing Page',
         externalUrl: 'https://l-2022.github.io/restaurant-site/',
         description:
             'Responsive restaurant landing page with modern UI and smooth navigation.',
-        technologies: 'HTML, CSS, JavaScript',
-        image:
-            `${BASE_URL}/images/projectImg/Landing-menu.png`,
+        technologies: 'TypeScript, React HTML, CSS',
+        // image: `${BASE_URL}/images/projectImg/Landing-menu.png`,
     },
     {
         projectName: 'FE Course Basic 2023',
@@ -87,8 +85,7 @@ export const projects: Project[] = [
         description:
             'Collection of browser-based games built during frontend basics course.',
         technologies: 'HTML, CSS, JavaScript',
-        image:
-            'https://raw.githubusercontent.com/VasylBiliak/fe-course-basic-2023/refs/heads/main/docs/GamesProject/img/about.png',
+        // image: 'https://raw.githubusercontent.com/VasylBiliak/fe-course-basic-2023/refs/heads/main/docs/GamesProject/img/about.png',
     },
     {
         projectName: 'Superheroes',
@@ -96,7 +93,6 @@ export const projects: Project[] = [
         description:
             'Web app for searching and exploring superheroes with API integration.',
         technologies: 'React, Axios, React Router, Vite',
-        image:
-            'https://l-2022.github.io/superheroes-frontend/baner-site.webp',
+        // image: 'https://l-2022.github.io/superheroes-frontend/baner-site.webp',
     },
 ];

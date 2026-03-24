@@ -12,7 +12,7 @@ p {
 }
 
 .content {
-    max-width: 1024px;
+    max-width: 1440px;
     height: 100%;
     display: grid;
     gap: var(--spacing);
