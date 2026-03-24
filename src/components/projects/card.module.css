@@ -1,0 +1,161 @@
+
+.projects_list__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--color-bg-section-el);
+    box-shadow: 0 0 0 1px var(--text-secondary);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.projects_list__box:hover {
+    box-shadow: 0 0 0 2px var(--btn-text);
+    transform: translateY(-4px);
+}
+
+.box_info  {
+    height: 100%;
+    display: grid;
+    gap: 15px;
+}
+
+.box_info__heading {
+    color: var(--text-secondary);
+    font-family: var(--font-title);
+    font-size: var(--font-size-large);
+    font-weight: bold;
+}
+.box_info__technology {
+    font-weight: bold;
+}
+.box_info__description {
+    word-wrap: break-word;
+    text-align: justify;
+    text-justify: inter-word;
+    color: var(--text-secondary);
+    font-size:  var(--font-size-base);
+    line-height: 1.5;
+}
+
+.box_list_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    z-index: 1100;
+}
+
+.box_list__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    padding: 0.8rem 1.3rem;
+    border-radius: 2px 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.box_list__icon {
+    font-size: 4rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .box_list__button:hover {
+        color: var(--btn-text);
+        box-shadow: 0 0 8px 8px var(--btn-text);
+        transform: scale(1.05);
+    }
+}
+
+.projects_list__image {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.projects_list__image > *, img {
+    width: 100%;
+    /*height: 100%;*/
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    /*height: 300px;*/
+    /*max-height: 300px;*/
+}
+
+
+@media screen and (min-width: 300px) {
+    .projects_list__box {
+        gap: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 430px) {
+
+    .projects_list__image img {
+        border-radius: 10px;
+    }
+    .projects_list__image {
+        grid-row: 3;
+    }
+    .box_list_buttons {
+        grid-row: 2;
+    }
+
+
+
+}
+
+@media (min-width: 768px){
+    .projects_list__box {
+        display: grid;
+        grid-template-columns: 5fr 1fr;
+        grid-template-rows: 1fr auto;
+    }
+
+    .box_info {
+        grid-area: 1 / 1 / 2 / 3; /* верх, на всю ширину */
+    }
+
+    .projects_list__image {
+        grid-area: 2 / 1 / 3 / 2; /* низ зліва */
+    }
+
+    .some_other_block {
+        grid-area: 2 / 2 / 3 / 3; /* низ справа */
+    }
+
+    .box_list_buttons {
+        display: flex;
+        /*flex-direction: column;*/
+        justify-content: center;
+    }
+
+    .projects_list__image > *, img {
+        width: 100%;
+
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        height: 300px;
+        max-height: 300px;
+    }
+}
+
+
+
+
+
+
+

@@ -1,19 +1,12 @@
 import React, { useEffect, useState, ReactNode } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
-import * as styles from './projects.module.css';
+import * as styles from './card.module.css';
+
 import QRCode from "@components/projects/QRCode";
+import { Project } from "../../data/projects";
 
-interface ProjectCardProps {
-    repoUrl?: string;
-    projectName: string;
-    image: ReactNode;
-    description?: string;
-    technologies?: string;
-    externalUrl?: string;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
+const ProjectCard: React.FC<Project> = ({
                                                      repoUrl,
                                                      externalUrl,
                                                      projectName,
@@ -56,11 +49,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className={styles.projects_list__box}>
             <div className={styles.box_info}>
                 <article className={styles.box_info__heading}>{projectName}</article>
-                <p className={`${styles.box_info__description} ${styles.box_info__technology}`}>
-                    {technologies}
-                </p>
+
                 <p className={styles.box_info__description}>{description}</p>
+                <p className={`${styles.box_info__description} ${styles.box_info__technology}`}>
+                {technologies}
+            </p>
             </div>
+            {/*<div className={styles.projects_list__image}>{image}</div>*/}
             <div className={styles.box_list_buttons}>
                 <div className={styles.box_list_buttons}>
                     {repoUrl && (
@@ -92,7 +87,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                     )}
                 </div>
             </div>
-            <div className={styles.projects_list__image}>{image}</div>
+
         </div>
     );
 };
