@@ -1,9 +1,8 @@
 import React, { useEffect, useState, ReactNode } from 'react';
+import QRCodeButton from "@components/ui/QRCodeButton/QRCodeButton";
 import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
 import * as styles from './card.module.css';
-
-import QRCode from "@components/utils/QRCode/QRCode";
 import { Project } from "@/data/projects";
 
 const ProjectCard: React.FC<Project> = ({
@@ -63,19 +62,17 @@ const ProjectCard: React.FC<Project> = ({
                     <div className={styles.card__actions}>
                     {externalUrl && (
                         <>
-                            <a
-                                href={externalUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.card__button}
-                                aria-label="Live Demo"
-                            >
-                                <BiLinkExternal className={styles.card__icon} />
-                            </a>
-
-                            <div className={styles.card__button}>
-                                <QRCode repoUrl={externalUrl} />
-                            </div>
+                            <QRCodeButton url={externalUrl}>
+                                <a
+                                    href={externalUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.card__button}
+                                    aria-label="Live Demo"
+                                >
+                                    <BiLinkExternal className={styles.card__icon} />
+                                </a>
+                            </QRCodeButton>
                         </>
                     )}
 

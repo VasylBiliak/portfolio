@@ -1,0 +1,35 @@
+.qrCode {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .qrButtonWrapper > .qrCode {
+        display: none !important;
+        opacity: 0 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .qrButtonWrapper:hover > .qrCode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .qrButtonWrapper:hover {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--text-primary);
+        padding-left: 0.8rem;
+        border-radius: 2px 12px;
+        transition: all 1s ease;
+        box-shadow: 0 0 16px 8px var(--btn-text);
+        transform: scale(1.05);
+        gap: 15px;
+    }
+
+
+}
+

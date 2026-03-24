@@ -72,6 +72,7 @@
     font-size: 4rem;
 }
 
+
 @media (hover: hover) and (pointer: fine) {
     .card__button:hover {
         color: var(--btn-text);
@@ -80,8 +81,10 @@
     }
 }
 
-/* TABLET */
 @media (min-width: 768px) {
+    .card__actionsWrapper {
+        justify-content: end;
+    }
 
     .card__actions {
         align-items: center;
