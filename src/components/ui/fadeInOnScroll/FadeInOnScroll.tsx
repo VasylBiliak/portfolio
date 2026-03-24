@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { ReactNode, useEffect  } from 'react';
 import * as styles from './fadeInOnScroll.module.css';
-import useSpacing from '../../hooks/useYOffset'
-import "../../styles/global.css";
+import useSpacing from '@/hooks/useYOffset'
+import "@/styles/global.css";
 
 interface FadeInOnScrollProps {
     children: ReactNode;

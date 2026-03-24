@@ -1,8 +1,8 @@
 import React from 'react';
 
 import * as styles from './projects.module.css';
-import ProjectCard from './ProjectCard';
-import { projects } from '../../data/projects'
+import ProjectCard from '@/components/ui/card/ProjectCard';
+import { projects } from '@/data/projects'
 
 const Projects: React.FC = () => {
     return (

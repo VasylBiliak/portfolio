@@ -24,7 +24,7 @@ const TitImage: React.FC = () => (
             }}
         />
         <StaticImage
-            src="../../images/svg/TIT-2.svg"
+            src="../../../images/svg/TIT-2.svg"
             alt="Tit"
             placeholder="blurred"
             max-width={500}

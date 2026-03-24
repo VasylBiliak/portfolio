@@ -1,14 +1,14 @@
 import React from "react";
 import { FaLinkedinIn, FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import AnimatedTypingText from "@/components/ui/animatedTypingText/AnimatedTypingText";
 import * as styles from "./footer.module.css";
-import AnimatedTypingText from "../animatedTypingText/AnimatedTypingText";
 
 const Footer: React.FC = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_container}>
-                <div className={styles.footer_heder}>
+                <div className={styles.footer_header}>
                     <article>
                         <AnimatedTypingText text={'Made with ❤  by Vasyl'}  duration={5}/>
                     </article>

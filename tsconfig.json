@@ -14,7 +14,14 @@
     "typeRoots": ["./node_modules/@types", "./src/types"],
     "baseUrl": "./",
     "paths": {
+      "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
+      "@ui/*": ["src/components/ui/*"],
+      "@sections/*": ["src/components/sections/*"],
+      "@cards/*": ["src/components/cards/*"],
+      "@layout/*": ["src/components/layout/*"],
+      "@modals/*": ["src/components/modals/*"],
+      "@backgrounds/*": ["src/components/backgrounds/*"],
       "@styles/*": ["src/styles/*"]
     }
   },

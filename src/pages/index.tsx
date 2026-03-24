@@ -1,13 +1,13 @@
 import React from "react";
 import { PageProps } from "gatsby";
-import Layout from "../components/Layout";
-import Contact from "../components/contact";
-import ProjectsList from "../components/projects";
-import Skills from "../components/skills";
-import About from "../components/about";
+import Layout from "@/components/Layout";
+import Contact from "@/components/sections/contact";
+import ProjectsList from "@/components/sections/projects";
+import Skills from "@/components/sections/skills";
+import About from "@/components/sections/about";
 import Home from "../components/Home";
-import Seo from "@components/Seo";
-import SectionWrapper from "../components/sectionWrapper";
+import Seo from "@/components/Seo";
+import SectionWrapper from '@/components/sections/sectionWrapper';
 
 const IndexPage: React.FC<PageProps> = () => {
     return (

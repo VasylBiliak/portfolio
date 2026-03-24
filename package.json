@@ -47,6 +47,7 @@
     "@types/react-helmet": "^6.1.11",
     "ajv": "^8.17.1",
     "cross-env": "^7.0.3",
+    "gatsby-plugin-alias-imports": "^1.0.5",
     "gh-pages": "^6.3.0",
     "typescript": "^5.7.2"
   }

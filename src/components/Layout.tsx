@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
-import Header from "../components/navbar";
-import Footer from "./Footer";
-import BackToTop from "./backToBtn";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/ui/backToBtn";
+import BackgroundImage from "@/components/ui/backgroundImage";
 import "../styles/global.css";
-import BackgroundImage from "./backgroundImage";
 
 interface LayoutProps {
     children: ReactNode;

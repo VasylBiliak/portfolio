@@ -63,6 +63,19 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-svg`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@": "src",
+          "@components": "src/components",
+          "@ui": "src/components/ui",
+          "@sections": "src/components/sections",
+          "@styles": "src/styles",
+        },
+        extensions: ["ts", "tsx", "js", "jsx"]
+      }
+    },
   ].filter(Boolean) as Array<PluginRef>,
   graphqlTypegen: {
     typesOutputPath: `./src/types/graphql-types.d.ts`,

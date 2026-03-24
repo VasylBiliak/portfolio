@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { sendMessage } from './sendMessage';
-import Modal from '../modal';
+import Modal from '@/components/modal';
 import * as styles from './contact.module.css';
-import SendButton from '../sendButton';
+import SendButton from '@/components/ui/sendButton';
 
 const Contact: React.FC = () => {
     const [formData, setFormData] = useState({

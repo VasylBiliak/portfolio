@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import ScrollReveal from '../fadeInOnScroll';
+import ScrollReveal from '@/components/ui/fadeInOnScroll';
 import * as styles from './sectionWrapper.module.css';
 
 interface SectionWrapperProps {

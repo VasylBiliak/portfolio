@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import MySVG from "./MySVG2";
-import * as styles from "./backgroundImage.module.css";
 import OwlImage from "./OwlImage";
 import TitImage from "./TitImage";
+import * as styles from "./backgroundImage.module.css";
 
 const BackgroundImage: React.FC = () => {
     const [theme, setTheme] = useState<string>("light");

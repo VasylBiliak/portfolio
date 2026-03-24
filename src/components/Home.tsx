@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from 'framer-motion';
+import TextAnimation from "@/components/ui/textJello/TextJello";
+import AnimatedTypingText from "@/components/ui/animatedTypingText/AnimatedTypingText";
 import "../styles/global.css";
-import TextAnimation from "./textJello/";
-import AnimatedTypingText from "./animatedTypingText/AnimatedTypingText";
 
 const Home: React.FC = () => {
 
@@ -11,7 +11,7 @@ const Home: React.FC = () => {
         animate:(customDelay: number) => ({
             opacity: 1, x: 0,
             transition: {
-            delay: customDelay * 0.2,  // Calculate delay based on `costom`
+            delay: customDelay * 0.2,
             duration: 1,
             ease: 'easeOut'
         }

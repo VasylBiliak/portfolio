@@ -16,7 +16,7 @@ const About: React.FC = () => {
             </div>
             <div className={styles.dp}>
                 <StaticImage className={styles.image}
-                             src="../../images/Me.png"
+                             src="../../../images/Me.png"
                              alt="My description"
                              placeholder="blurred"
                              max-width={500}

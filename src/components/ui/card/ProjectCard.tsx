@@ -3,8 +3,8 @@ import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
 import * as styles from './card.module.css';
 
-import QRCode from "@components/projects/QRCode";
-import { Project } from "../../data/projects";
+import QRCode from "@components/utils/QRCode/QRCode";
+import { Project } from "@/data/projects";
 
 const ProjectCard: React.FC<Project> = ({
                                                      repoUrl,

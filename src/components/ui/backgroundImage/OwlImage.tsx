@@ -42,7 +42,7 @@ const OwlImage: React.FC = () => (
             }}
         />
         <StaticImage
-            src="../../images/svg/Owl.svg"
+            src="../../../images/svg/Owl.svg"
             alt="Owl"
             placeholder="blurred"
             max-width={500}

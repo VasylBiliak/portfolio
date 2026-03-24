@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/global.css";
+import "@/styles/global.css";
 
 const Hamburger: React.FC = () => {
     const toggleClass = (id: string, className: string) => {

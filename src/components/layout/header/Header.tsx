@@ -1,10 +1,10 @@
 import React from "react";
 import "./header.css";
-import ThemeSwitcher from "../themeSwitcher";
-import Hamburger from "../Hamburger";
-import TextAnimation from "../textJello";
-import useSpacing from '../../hooks/useYOffset'
-import ThemeOption from "../themeSwitcher/ThemeSwitcher";
+import ThemeSwitcher from "@/components/ui/themeSwitcher";
+import Hamburger from "@/components/ui/Hamburger";
+import TextAnimation from "@/components/ui/textJello/TextJello";
+import useSpacing from '@/hooks/useYOffset'
+import ThemeOption from "@/components/ui/themeSwitcher/ThemeSwitcher";
 
 const menuItems = [
     { id: "about", label: "About Me", href: "about", delay: 400 },

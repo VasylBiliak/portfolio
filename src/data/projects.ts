@@ -1,4 +1,4 @@
-import { BASE_URL } from "../config";
+import { BASE_URL } from "@/components/utils/config";
 
 // src/data/projects.ts
 export interface Project {
