@@ -45,9 +45,11 @@ const OwlImage: React.FC = () => (
             src="../../../images/svg/Owl.svg"
             alt="Owl"
             placeholder="blurred"
-            max-width={500}
-            quality={100}
-            layout="constrained" />
+            loading="eager"
+            quality={60}
+            layout="constrained"
+            formats={['auto', 'webp']}
+        />
     </div>
 );
 

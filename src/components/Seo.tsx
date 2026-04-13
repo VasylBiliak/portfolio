@@ -21,6 +21,11 @@ const Seo = () => {
 
     return (
         <>
+            {/* Resource Hints - Preconnect to speed up font loading */}
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
             <title>{siteMetadata.siteTitle}</title>
             <meta name="description" content={siteMetadata.siteDescription} />
             <meta name="author" content="Vasyl Biliak" />

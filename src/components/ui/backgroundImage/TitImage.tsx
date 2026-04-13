@@ -27,9 +27,10 @@ const TitImage: React.FC = () => (
             src="../../../images/svg/TIT-2.svg"
             alt="Tit"
             placeholder="blurred"
-            max-width={500}
-            quality={100}
+            loading="eager"
+            quality={60}
             layout="constrained"
+            formats={['auto', 'webp']}
         />
     </div>
 );

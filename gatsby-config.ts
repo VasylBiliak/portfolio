@@ -45,11 +45,20 @@ const config: GatsbyConfig = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Raleway\:,500,700`,
+          `Raleway\:500,700`,
           `Orbitron\:400,500,700`,
           `Comfortaa\:300,700`,
         ],
         display: "swap",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-html-attributes`,
+      options: {
+        preconnect: [
+          "https://fonts.googleapis.com",
+          "https://fonts.gstatic.com",
+        ],
       },
     },
     {

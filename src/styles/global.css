@@ -1,38 +1,19 @@
 @import './layout.css';
 
+/* ============================================
+   GLOBAL CSS - Portfolio Theme System
+   ============================================ */
+
+/* --------------------------------------------
+   1. CSS RESET & BASE STYLES
+   -------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    font-weight: inherit;
-    font-style: inherit;
     font-size: 100%;
     vertical-align: baseline;
-}
-
-*::selection {
-    background-color: transparent;
-}
-
-*::-moz-selection {
-    background: transparent;
-}
-
-* {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    /*
-    Prevents the user from selecting text or elements.
-    Commonly used on interactive elements like buttons to improve user experience.
-
-    -webkit-tap-highlight-color: transparent;
-    Disables the default tap highlight effect (gray or blue overlay)
-    that appears on mobile devices when touching an element.
-    This is useful for custom-styled interactive elements to avoid visual interruptions.
-    */
-    -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -41,16 +22,26 @@ html {
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    scrollbar-color: #159374 transperent;
+    scrollbar-color: var(--color-teal-medium) transparent;
 }
 
+/* Prevent text selection on interactive elements */
+* {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Re-enable text selection for content elements */
 p, input, textarea {
     user-select: text;
 }
 
+/* Selection styling */
 ::selection {
-    background-color: var(--color-green-dark); /* Зелений фон */
-    color: var(--text-primary); /* Білий текст */
+    background-color: var(--color-green-dark);
+    color: var(--text-primary);
 }
 
 ::-moz-selection {
@@ -58,14 +49,17 @@ p, input, textarea {
     color: var(--text-primary);
 }
 
-/* Font families  ======================== */
+/* --------------------------------------------
+   2. CSS VARIABLES - TYPOGRAPHY
+   -------------------------------------------- */
 :root {
+    /* Font Families */
     --font-title: 'Raleway', sans-serif;
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Lora', serif;
     --font-mono: 'Fira Code', monospace;
 
-    /* Font sizes */
+    /* Font Sizes */
     --font-size-small: 1.2rem;
     --font-size-skill-title: 2rem;
     --font-size-base: 2.3rem;
@@ -75,127 +69,110 @@ p, input, textarea {
     --font-size-name: 6.8rem;
 }
 
-/* === Base Colors  ======================== */
+/* --------------------------------------------
+   3. CSS VARIABLES - BASE COLORS
+   -------------------------------------------- */
 :root {
-
+    /* Neutral Colors */
     --color-black: #000000;
     --color-white: #ffffff;
     --color-gray-dark: #292929;
     --color-gray-light: #dcdcdc;
     --color-gray-medium: #e1e0e0;
+
+    /* Accent Colors */
     --color-yellow: yellow;
-    --color-blue-lighter: #a3defb;
+
+    /* Blue Scale */
     --color-blue-light: #6bc6f7;
     --color-blue-medium: #3ea8e4;
-    --color-blue-dark: #2b7db6;
-    --color-blue-darker: #1e5c8a;
+
+    /* Teal/Green Scale */
     --color-teal-dark: #074b4b;
     --color-teal-medium: #159374;
-    --color-teal-light: #2deeee;
     --color-cyan-dark: #0f8d8d;
     --color-green-dark: #0f785c;
     --color-green-medium: #096565;
-    --bg-hover: #0f7878;
+
+    /* Beige (Light Theme Base) */
+    --color-beige-light: #e1d4a0;
+
     /* Spacing */
     --spacing: 100vh;
-
-    --color-beige-lighter: #ebe1b5;
-    --color-beige-light: #e1d4a0;
-    --color-beige-medium: #bfa86d;
-    --color-beige-dark: #9c8754;
-    --color-beige-darker: #7a693e;
-
 }
 
-/* ===== Default (Dark Theme) ======================== */
+/* --------------------------------------------
+   4. CSS VARIABLES - DARK THEME (Default)
+   -------------------------------------------- */
 :root {
-    /* Main Background Color */
-    --color-bg-main: #000000;  /* Color for background */
+    /* Background Colors */
+    --color-bg-main: #000000;
     --color-bg-section-el: rgba(0, 0, 0, 0.65);
-    --color-bg-input: rgba(0, 0, 0, 0.35);
     --color-bg-input-focus: rgba(0, 0, 0, 0.75);
 
+    /* Theme Backgrounds (for future use) */
     --bg-primary: #11111b;
     --bg-secondary: #0a0a10;
+
+    /* Text Colors */
     --text-primary: var(--color-white);
     --text-secondary: var(--color-gray-medium);
-
-    /* Borders and shadows */
-    --border-color: var(--color-gray-dark);
-    --shadow-color: rgba(0, 0, 0, 0.137);
 
     /* Buttons */
     --btn-bg: var(--color-black);
     --btn-text: var(--color-yellow);
     --btn-hover-bg: var(--color-cyan-dark);
     --btn-hover-text: var(--color-yellow);
-
-
-    /* Secondary Buttons */
-    --btn-secondary-bg: var(--color-yellow);
     --btn-secondary-bg-hover: var(--color-green-dark);
+    --bg-hover: #0f7878;
 
-    /*    drop-shadow */
+    /* Effects */
     --drop-shadow: var(--color-yellow);
-
-    /* Jello effect */
     --jello-primary: var(--color-teal-medium);
-    --jello-hover: var(--color-yellow);
-
     --color-jello: var(--jello-primary);
-    --color-jello-hover: var(--jello-hover);
+    --color-jello-hover: var(--color-yellow);
 
-    /* Gradient */
+    /* Gradients */
     --gradient-primary: linear-gradient(
-            45deg,
-            #ffff00,
-            #dede28,
-            var(--color-green-medium),
-            var(--color-green-dark));
-
+        45deg,
+        #ffff00,
+        #dede28,
+        var(--color-green-medium),
+        var(--color-green-dark)
+    );
     --gradient-secondary: linear-gradient(
-            90deg,
-            var(--color-blue-light),
-            #0f7575);
+        90deg,
+        var(--color-blue-light),
+        #0f7575
+    );
     --gradient-runing-ferst: -webkit-linear-gradient(
-            135deg,
-            var(--color-green-dark),
-            var(--color-yellow),
-            var(--color-green-dark),
-            var(--color-yellow)
-    );
-    --gradient-runing-second: linear-gradient(
-            -45deg,
-            var(--color-green-dark),
-            var(--color-yellow),
-            var(--color-green-dark),
-            var(--color-yellow)
+        135deg,
+        var(--color-green-dark),
+        var(--color-yellow),
+        var(--color-green-dark),
+        var(--color-yellow)
     );
 
-    /* SVG */
+    /* SVG Colors */
     --svg-color: var(--color-blue-light);
-
 }
 
+/* --------------------------------------------
+   5. CSS VARIABLES - LIGHT THEME
+   -------------------------------------------- */
 [data-theme="light"] {
-    /*    drop-shadow */
-    --drop-shadow: var(--color-teal-medium);
-
-    /* Main Background Color */
-    --color-bg-main: var(--color-beige-light);  /* Color for background */
+    /* Background Colors */
+    --color-bg-main: var(--color-beige-light);
     --color-bg-section-el: rgba(218, 206, 152, 0.65);
-    --color-bg-input: rgba(255, 255, 0, 0.3);
     --color-bg-input-focus: rgba(224, 210, 156, 0.9);
 
-    /* Light Theme */
+    /* Theme Backgrounds */
     --bg-primary: var(--color-white);
     --bg-secondary: #f5f5f5;
+
+    /* Text Colors */
     --text-primary: var(--color-black);
     --text-secondary: #333333;
-
-    /* Borders and shadows */
-    --border-color: var(--color-gray-light);
-    --shadow-color: rgba(0, 0, 0, 0.1);
 
     /* Buttons */
     --btn-bg: var(--color-yellow);
@@ -203,60 +180,61 @@ p, input, textarea {
     --btn-hover-bg: var(--color-teal-dark);
     --btn-hover-text: var(--color-blue-light);
 
-    /* Jello effect */
-    --jello-primary: var(--color-teal-medium);
-    --jello-hover: var(--color-blue-light);
+    /* Effects */
+    --drop-shadow: var(--color-teal-medium);
+    --color-jello-hover: var(--color-blue-light);
 
-    --color-jello: var(--jello-primary);
-    --color-jello-hover: var(--jello-hover);
-
-    /* Gradient */
+    /* Gradients */
     --gradient-primary: linear-gradient(
-    45deg,
-    var(--color-teal-medium),
-    var(--color-teal-medium),
-    var(--color-blue-light),
-    var(--color-blue-light)
-
-
+        45deg,
+        var(--color-teal-medium),
+        var(--color-teal-medium),
+        var(--color-blue-light),
+        var(--color-blue-light)
     );
-
-    --gradient-secondary: linear-gradient(
-            90deg,
-            var(--color-blue-light),
-            #0f7575);
     --gradient-runing-ferst: -webkit-linear-gradient(
-            135deg,
-            var(--color-green-dark),
-            var(--color-blue-light),
-            var(--color-green-dark),
-            var(--color-blue-light)
-    );
-    --gradient-runing-second: linear-gradient(
-            -45deg,
-            var(--color-green-dark),
-            var(--color-yellow),
-            var(--color-green-dark),
-            var(--color-yellow)
+        135deg,
+        var(--color-green-dark),
+        var(--color-blue-light),
+        var(--color-green-dark),
+        var(--color-blue-light)
     );
 
-     /*SVG */
+    /* SVG Colors */
     --svg-color: var(--color-green-dark);
 }
 
+/* --------------------------------------------
+   6. GLOBAL ELEMENT STYLES
+   -------------------------------------------- */
 body {
     background-color: var(--color-bg-main);
     font-family: 'Orbitron', sans-serif;
+    font-display: swap;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
+/* --------------------------------------------
+   7. UTILITY ANIMATIONS
+   -------------------------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.typing-text {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* --------------------------------------------
+   7. SCROLLBAR STYLES
+   -------------------------------------------- */
 ::-webkit-scrollbar {
     width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-bg-main);
     background: transparent;
 }
 
