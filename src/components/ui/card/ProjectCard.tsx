@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ReactNode } from 'react';
+import React, { useEffect, useState, ReactNode, useMemo } from 'react';
 import QRCodeButton from "@components/ui/QRCodeButton/QRCodeButton";
 import { FaGithub } from 'react-icons/fa';
 import { BiLinkExternal } from 'react-icons/bi';
@@ -18,7 +18,7 @@ const ProjectCard: React.FC<Project> = ({
     const [technologies, setTechnologies] = useState(propTechnologies || 'HTML, CSS, JS...');
     const borderColor = useCssVariable('--btn-text');
     const [isHovered, setIsHovered] = useState(false);
-    
+
     useEffect(() => {
         if ((!repoUrl || (!repoUrl.includes("github.com"))) || (propDescription && propTechnologies)) return;
 
@@ -45,6 +45,17 @@ const ProjectCard: React.FC<Project> = ({
         fetchRepoData();
     }, [repoUrl, propDescription, propTechnologies]);
 
+      const [expanded, setExpanded] = useState(false);
+
+  const words = useMemo(() => description.trim().split(/\s+/), [description]);
+
+  const isLong = words.length > 15;
+
+  const displayedText = useMemo(() => {
+    if (!isLong) return description;
+    return expanded ? description : words.slice(0, 15).join(" ") + "...";
+  }, [expanded, isLong, description, words]);
+
 
 
     return (
@@ -65,7 +76,16 @@ const ProjectCard: React.FC<Project> = ({
                     </article>
 
                     <p className={styles.card__description}>
-                        {description}
+                        {displayedText}
+
+                        {isLong && (
+                            <button 
+                                onClick={() => setExpanded(prev => !prev)}
+                                className={styles.card__description_btn}
+                            >
+                                {expanded ? "Read less" : "Read more"}
+                            </button>
+                        )}
                     </p>
                     <p className={`${styles.card__description} ${styles.card__technologies}`}>
                         {technologies}

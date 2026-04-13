@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-family: var(--font-title);
     font-size: var(--font-size-large);
     font-weight: bold;
@@ -24,9 +24,22 @@
 .card__description {
     word-wrap: break-word;
     text-align: justify;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-size: var(--font-size-base);
     line-height: 1.5;
+}
+
+.card__description_btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    line-height: 2;
+    padding: 0;
+    margin-left: 8px;
+    transition: color 0.2s ease;
+    text-decoration: underline;
 }
 
 .card__technologies {
@@ -68,6 +81,11 @@
         color: var(--btn-text);
         box-shadow: 0 0 8px 4px var(--btn-text);
         transform: scale(1.05);
+    }
+
+    .card__description_btn:hover {
+        color: var(--btn-text);
+        text-decoration: underline;
     }
 }
 

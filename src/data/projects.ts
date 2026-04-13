@@ -11,12 +11,20 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+        {
+        projectName: 'Vor Studio',
+        externalUrl: 'https://vor-studio.vercel.app/',
+        description:
+            'A high-performance e-commerce platform for the Vor Studio lifestyle brand. Leveraging the power of Next.js and Redux Toolkit, the project features lightning-fast page transitions, complex state management for the shopping cart, and a fully responsive interface. Optimized for speed, SEO, and flawless UX.',
+        technologies: 'React, TypeScript, Next.js, Tailwind, CSS, Redux Toolkit, Vite, Vercel',
+        // image: 'https://raw.githubusercontent.com/VasylBiliak/client-demo-site/refs/heads/main/public/baner.png',
+    },
     {
         projectName: 'Client Demo Site',
         repoUrl: 'https://github.com/VasylBiliak/client-demo-site',
         externalUrl: 'https://vasylbiliak.github.io/client-demo-site/',
         description:
-            'Client Demo Site is a demonstration website designed to showcase responsive layout and modern technologies.',
+            'A professional landing page template designed for corporate clients. This project showcases a clean, modern aesthetic using Material UI components, providing a scalable structure for business presentations and service demonstrations.',
         technologies: 'React, Vite, CSS Modules, MUI',
         // image: 'https://raw.githubusercontent.com/VasylBiliak/client-demo-site/refs/heads/main/public/baner.png',
     },
@@ -35,7 +43,7 @@ export const projects: Project[] = [
         externalUrl: 'https://vasylbiliak.github.io/torassembly/',
         repoUrl: '',
         description:
-            'Single-page website showcasing services and allowing service orders with responsive UI and theme switching.',
+            'A modular React-based landing page featuring centralized state management via Redux Toolkit. The project demonstrates clean UI/UX principles with CSS Modules for scoped styling, offering seamless theme transitions and a streamlined interactive ordering system.',
         technologies: 'React, Redux Toolkit, CSS Modules',
         // image: `${BASE_URL}/images/projectImg/tor_assembly.png`,
     },
@@ -91,7 +99,7 @@ export const projects: Project[] = [
         projectName: 'Superheroes',
         externalUrl: 'https://l-2022.github.io/superheroes-frontend',
         description:
-            'Web app for searching and exploring superheroes with API integration.',
+            'A data-driven web application with a heavy emphasis on backend architecture. This project showcases the ability to design and consume complex RESTful APIs, manage large datasets of superhero lore, and ensure seamless communication between the client and the server.',
         technologies: 'React, Axios, React Router, Vite',
         // image: 'https://l-2022.github.io/superheroes-frontend/baner-site.webp',
     },
