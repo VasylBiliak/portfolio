@@ -1,15 +1,5 @@
 .card {
-    gap: 1.5rem;
-    padding: 1.5rem;
     border-radius: 20px;
-    background-color: var(--color-bg-section-el);
-    box-shadow: 0 0 0 1px var(--text-secondary);
-    transition: all 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 0 0 2px var(--btn-text);
-    transform: translateY(-4px);
 }
 
 .card__content {

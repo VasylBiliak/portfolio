@@ -23,7 +23,7 @@ const Eye: React.FC<EyeProps> = ({ eyeStyle, pupilStyle, className }) => {
             const deltaY = event.clientY - eyeCenterY;
             const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
 
-            const maxMove = eyeRect.width / 4; // межа руху зіниці
+            const maxMove = eyeRect.width / 4;
             const moveX = (deltaX / distance) * Math.min(maxMove, distance);
             const moveY = (deltaY / distance) * Math.min(maxMove, distance);
 

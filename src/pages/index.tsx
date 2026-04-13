@@ -28,7 +28,6 @@ const IndexPage: React.FC<PageProps> = () => {
         return <Loader fullScreen />;
     }
 
-    
     return (
         <Layout>
             <Home />

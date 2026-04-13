@@ -10,7 +10,7 @@ const BackgroundImage: React.FC = () => {
     const [strokeWidth, setStrokeWidth] = useState<string>("0.5");
 
     useEffect(() => {
-        if (typeof window === "undefined") return; // Уникнення SSR помилок
+        if (typeof window === "undefined") return;
 
         const updateTheme = () => {
             const currentTheme = localStorage.getItem("theme") || document.documentElement.getAttribute("data-theme") || "light";

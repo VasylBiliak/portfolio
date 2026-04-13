@@ -4,14 +4,14 @@ interface MySVGProps {
     stroke?: string;
     width?: string;
     height?: string;
-    strokeWidth?: string; // Додано новий параметр для товщини ліній
+    strokeWidth?: string;
 }
 
 const MySVG: React.FC<MySVGProps> = ({
                                          stroke = 'white',
                                          width = '1400',
                                          height = '1300',
-                                         strokeWidth = '1', // Значення за замовчуванням
+                                         strokeWidth = '1', 
                                      }) => (
 
 
