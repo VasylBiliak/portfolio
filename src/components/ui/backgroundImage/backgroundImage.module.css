@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: opacity 0.3s ease-in-out;
+    ;/*transition: opacity 0.3s ease-in-out  */
 }
 
 .wrapper_first_image {

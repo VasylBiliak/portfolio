@@ -6,7 +6,7 @@ import * as styles from "./backgroundImage.module.css";
 
 const BackgroundImage: React.FC = () => {
     const [theme, setTheme] = useState<string>("light");
-    const [colorSvg, setColorSvg] = useState<string>("");
+    const [mainBgFoon, setmainBgFoon] = useState<string>("");
     const [strokeWidth, setStrokeWidth] = useState<string>("0.5");
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const BackgroundImage: React.FC = () => {
             const color = getComputedStyle(document.documentElement)
                 .getPropertyValue("--svg-color")
                 .trim();
-            setColorSvg(color);
+            setmainBgFoon(color);
         };
 
         updateTheme();
@@ -37,7 +37,7 @@ const BackgroundImage: React.FC = () => {
                 {theme === "light" ? <TitImage /> : <OwlImage />}
             </div>
             <div className={styles.background_image}>
-                <MySVG stroke={colorSvg}
+                <MySVG stroke={mainBgFoon}
                        width="100%"
                        height="100%"
                        strokeWidth={strokeWidth}

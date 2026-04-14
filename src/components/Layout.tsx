@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/Footer";
+import Footer from "@/components/layout/footer";
 import BackToTop from "@/components/ui/backToBtn";
-import BackgroundImage from "@/components/ui/backgroundImage";
+import BackgroundMain from "@/components/ui/Background";
 import "../styles/global.css";
 
 interface LayoutProps {
@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     return (
         <div className="layout">
-            <BackgroundImage />
+            <BackgroundMain />
             <Header />
             <main className="content">{children}</main>
             <Footer />
