@@ -1,9 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState, useEffect } from "react";
 import type { PageProps } from "gatsby";
 import Layout from "@/components/Layout";
 import Home from "../components/Home";
 import Seo from "@/components/Seo";
 import SectionWrapper from '@/components/sections/sectionWrapper';
+import Loader from "@/components/ui/loader";
 
 // Lazy load below-fold sections for better performance
 const About = lazy(() => import("@/components/sections/about"));
@@ -17,7 +18,19 @@ const Contact = lazy(() => import("@/components/sections/contact"));
 const SectionFallback = () => <div style={{ minHeight: '50vh' }} />;
 
 const IndexPage: React.FC<PageProps> = () => {
-    return (
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2700);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Loader />;
+
+  return (
         <Layout>
             <Home />
             <Suspense fallback={<SectionFallback />}>
