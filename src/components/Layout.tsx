@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import BackToTop from "@/components/ui/backToBtn";
+import BackToTop from "@/components/ui/backToTop";
 import BackgroundMain from "@/components/ui/Background";
 import "../styles/global.css";
 

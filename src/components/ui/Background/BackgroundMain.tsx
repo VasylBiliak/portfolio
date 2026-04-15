@@ -31,25 +31,25 @@ const BackgroundMain: React.FC = () => {
         <div className={styles.background_container}>
             {theme === "light" ?
                 <ShapeGrid
-                    speed={0.5}
-                    squareSize={40}
-                    direction="diagonal"
-                    shape="hexagon"
+                    speed={0.1}
+                    squareSize={100}
+                    direction="up"
+                    shape="square"
                     borderColor={mainBgFoon}
                     hoverFillColor={getComputedStyle(document.documentElement).getPropertyValue("--btn-hover-bg").trim()}
-                    overlayInnerColor="rgba(197, 229, 39, 0.2)" // центр
-                    overlayOuterColor="rgba(210, 197, 75, 0.9)"
+                    overlayInnerColor="rgba(197, 229, 39, 0)"
+                    overlayOuterColor="rgba(210, 197, 75, 0)"
                 />
                 :
                 <ShapeGrid
-                    speed={0.5}
-                    squareSize={40}
-                    direction="diagonal"
-                    shape="hexagon"
+                    speed={0.1}
+                    squareSize={100}
+                    direction="up"
+                    shape="square"
                     borderColor={mainBgFoon}
                     hoverFillColor={getComputedStyle(document.documentElement).getPropertyValue("--btn-hover-bg").trim()}
-                    overlayInnerColor="rgba(67, 101, 2, 0.1)" 
-                    overlayOuterColor="rgba(9, 105, 46, 0.1)" 
+                    overlayInnerColor="rgba(67, 101, 2, 0)" 
+                    overlayOuterColor="rgba(9, 105, 46, 0)" 
                 />
             }
 

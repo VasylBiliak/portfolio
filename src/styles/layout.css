@@ -1,14 +1,16 @@
+
+
 /* Layout, Home and Sections */
-
-p {
-    font-family: 'Comfortaa', sans-serif;
-}
-
 .layout {
     min-height: 100vh;
     padding: 0 8%;
     display: grid;
     justify-items: center;
+}
+
+.layout {
+  width: 100%;
+  max-width: 100%;
 }
 
 .content {

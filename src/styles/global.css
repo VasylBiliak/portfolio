@@ -1,76 +1,15 @@
+@import './reset.css';
 @import './layout.css';
+@import './components.css';
+@import './typography.css';
+
 
 /* ============================================
    GLOBAL CSS - Portfolio Theme System
    ============================================ */
 
 /* --------------------------------------------
-   1. CSS RESET & BASE STYLES
-   -------------------------------------------- */
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    -webkit-tap-highlight-color: transparent;
-}
-
-html {
-    font-size: 65%;
-    scroll-behavior: smooth;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    scrollbar-color: var(--color-teal-medium) transparent;
-}
-
-/* Prevent text selection on interactive elements */
-* {
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-user-select: none;
-}
-
-/* Re-enable text selection for content elements */
-p, input, textarea {
-    user-select: text;
-}
-
-/* Selection styling */
-::selection {
-    background-color: var(--color-green-dark);
-    color: var(--text-primary);
-}
-
-::-moz-selection {
-    background-color: var(--color-green-dark);
-    color: var(--text-primary);
-}
-
-/* --------------------------------------------
-   2. CSS VARIABLES - TYPOGRAPHY
-   -------------------------------------------- */
-:root {
-    /* Font Families */
-    --font-title: 'Raleway', sans-serif;
-    --font-primary: 'Roboto', sans-serif;
-    --font-secondary: 'Lora', serif;
-    --font-mono: 'Fira Code', monospace;
-
-    /* Font Sizes */
-    --font-size-small: 1.2rem;
-    --font-size-skill-title: 2rem;
-    --font-size-base: 2.3rem;
-    --font-size-large: 2.4rem;
-    --font-size-xlarge: 3.2rem;
-    --font-size-heading: 4rem;
-    --font-size-name: 6.8rem;
-}
-
-/* --------------------------------------------
-   3. CSS VARIABLES - BASE COLORS
+   CSS VARIABLES - BASE COLORS
    -------------------------------------------- */
 :root {
     /* Neutral Colors */
@@ -81,38 +20,48 @@ p, input, textarea {
     --color-gray-medium: #ececec;
 
     /* Accent Colors */
-    --color-yellow: yellow;
+    --color-yellow: #ffff00;
 
     /* Blue Scale */
     --color-blue-light: #6bc6f7;
-    --color-blue-medium: #3ea8e4;
+    --color-blue-medium: #0f5983a1;
 
-    /* Teal/Green Scale */
-    --color-teal-dark: #074b4b;
+    /* Teal/Green Scale */  
+    --color-teal-light: #18d6a794;  
     --color-teal-medium: #159374;
+    --color-green-medium: #096565;
     --color-cyan-dark: #0f8d8d;
     --color-green-dark: #0f785c;
-    --color-green-medium: #096565;
+    --color-teal-dark: #074b4b;
+    
 
     /* Beige (Light Theme Base) */
-    --color-beige-light: #e1d4a0;
+    --color-beige-light: #f7edc4;
+
+    /* Extra (NEW — всі хардкоди винесені) */
+    --color-dark-primary: #11111b;
+    --color-dark-secondary: #0a0a10;
+    --color-teal-accent: #0f7575;
+    --color-hover-accent: #0f7878;
+    --color-light-secondary-text: #333333;
+    --color-light-bg-secondary: #f5f5f5;
 
     /* Spacing */
     --spacing: 100vh;
 }
 
 /* --------------------------------------------
-   4. CSS VARIABLES - DARK THEME (Default)
+   CSS VARIABLES - DARK THEME (Default)
    -------------------------------------------- */
 :root {
     /* Background Colors */
-    --color-bg-main: #000000;
+    --color-bg-main: var(--color-black);
     --color-bg-section-el: rgba(0, 0, 0, 0.65);
     --color-bg-input-focus: rgba(0, 0, 0, 0.75);
 
     /* Theme Backgrounds (for future use) */
-    --bg-primary: #11111b;
-    --bg-secondary: #0a0a10;
+    --bg-primary: var(--color-dark-primary);
+    --bg-secondary: var(--color-dark-secondary);
 
     /* Text Colors */
     --text-primary: var(--color-white);
@@ -124,7 +73,7 @@ p, input, textarea {
     --btn-hover-bg: var(--color-cyan-dark);
     --btn-hover-text: var(--color-yellow);
     --btn-secondary-bg-hover: var(--color-green-dark);
-    --bg-hover: #0f7878;
+    --bg-hover: var(--color-hover-accent);
 
     /* Effects */
     --drop-shadow: var(--color-yellow);
@@ -135,16 +84,18 @@ p, input, textarea {
     /* Gradients */
     --gradient-primary: linear-gradient(
         45deg,
-        #ffff00,
-        #dede28,
+        var(--color-yellow),
+        var(--color-yellow),
         var(--color-green-medium),
         var(--color-green-dark)
     );
+
     --gradient-secondary: linear-gradient(
         90deg,
         var(--color-blue-light),
-        #0f7575
+        var(--color-teal-accent)
     );
+
     --gradient-runing-ferst: -webkit-linear-gradient(
         135deg,
         var(--color-green-dark),
@@ -154,11 +105,11 @@ p, input, textarea {
     );
 
     /* SVG Colors */
-    --svg-color: var(--color-blue-light);
+    --svg-color: var(--color-blue-medium);
 }
 
 /* --------------------------------------------
-   5. CSS VARIABLES - LIGHT THEME
+   CSS VARIABLES - LIGHT THEME
    -------------------------------------------- */
 [data-theme="light"] {
     /* Background Colors */
@@ -168,20 +119,24 @@ p, input, textarea {
 
     /* Theme Backgrounds */
     --bg-primary: var(--color-white);
-    --bg-secondary: #f5f5f5;
+    --bg-secondary: var(--color-light-bg-secondary);
 
     /* Text Colors */
     --text-primary: var(--color-black);
-    --text-secondary: #333333;
+    --text-secondary: var(--color-light-secondary-text);
 
     /* Buttons */
     --btn-bg: var(--color-yellow);
     --btn-text: var(--color-black);
-    --btn-hover-bg: var(--color-teal-dark);
+    --btn-hover-bg: var(--color-teal-light);
     --btn-hover-text: var(--color-blue-light);
+    --btn-secondary-bg-hover: var(--color-teal-medium);
+    --bg-hover: var(--color-teal-medium);
 
     /* Effects */
     --drop-shadow: var(--color-teal-medium);
+    --jello-primary: var(--color-teal-medium);
+    --color-jello: var(--jello-primary);
     --color-jello-hover: var(--color-blue-light);
 
     /* Gradients */
@@ -192,6 +147,7 @@ p, input, textarea {
         var(--color-blue-light),
         var(--color-blue-light)
     );
+
     --gradient-runing-ferst: -webkit-linear-gradient(
         135deg,
         var(--color-green-dark),
@@ -201,51 +157,5 @@ p, input, textarea {
     );
 
     /* SVG Colors */
-    --svg-color: var(--color-green-dark);
+    --svg-color: var(--color-teal-light);
 }
-
-/* --------------------------------------------
-   6. GLOBAL ELEMENT STYLES
-   -------------------------------------------- */
-body {
-    background-color: var(--color-bg-main);
-    font-family: 'Orbitron', sans-serif;
-    font-display: swap;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-/* --------------------------------------------
-   7. UTILITY ANIMATIONS
-   -------------------------------------------- */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.typing-text {
-    animation: fadeIn 0.5s ease-out forwards;
-}
-
-/* --------------------------------------------
-   7. SCROLLBAR STYLES
-   -------------------------------------------- */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--jello-primary);
-    border-radius: 999px;
-    border: 2px solid transparent;
-    background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #fff;
-}
-

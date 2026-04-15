@@ -2419,5 +2419,10 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
+type GetSignStaticQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type GetSignStaticQuery = { readonly allFile: { readonly nodes: ReadonlyArray<{ readonly publicURL: string | null }> } };
+
 
 }

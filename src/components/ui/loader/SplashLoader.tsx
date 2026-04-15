@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
-import { ReactComponent as SignatureSVG } from "../../../images/sign.svg";
+
+// Імпортуємо ваші компоненти та стилі
+import SignSvg from "./SignSvg";
+import ElectricBorder from "@components/ui/ElectricBorder/ElectricBorder";
+import * as styles from "./loader.module.css";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(CSSPlugin);
@@ -16,35 +20,40 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [isMounted, setIsMounted] = useState<boolean>(true);
 
+
+  const [hoverColor, setHoverColor] = useState<string>("#14cf45");
+
   useEffect(() => {
-    if (typeof window === "undefined") return;
+  if (typeof window !== "undefined") {
+    const color = getComputedStyle(document.documentElement)
+      .getPropertyValue("--btn-hover-bg")
+      .trim();
+    
+    if (color) setHoverColor(color);
+  }
+}, []);
+
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !svgRef.current || !containerRef.current) return;
 
     const svgElement = svgRef.current;
     const container = containerRef.current;
-
-    if (!svgElement || !container) return;
 
     const paths = svgElement.querySelectorAll<SVGGeometryElement>(
       "path, line, polyline, circle, ellipse"
     );
 
-    if (!paths.length) return;
+    if (paths.length === 0) return;
 
     paths.forEach((path) => {
-      const length = path.getTotalLength?.();
-      if (!length || isNaN(length)) return;
-
-      path.removeAttribute("fill");
-      path.removeAttribute("stroke");
-
+      const length = path.getTotalLength?.() || 0;
       gsap.set(path, {
         strokeDasharray: length,
         strokeDashoffset: length,
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        fill: "none",
-        stroke: "#14cf45",
-        strokeWidth: 1,
+        fill: "rgba(20, 207, 69, 0)",
+        stroke: "#912d06",
+        strokeWidth: 1.5,
       });
     });
 
@@ -52,7 +61,7 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
       onComplete: () => {
         gsap.to(container, {
           opacity: 0,
-          duration: 0.6,
+          duration: 0.8,
           onComplete: () => {
             setIsMounted(false);
             onAnimationComplete?.();
@@ -63,23 +72,18 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
 
     tl.to(paths, {
       strokeDashoffset: 0,
-      duration: 2.5,
+      duration: 2.2,
       ease: "power2.inOut",
-      stagger: 0.15,
+      stagger: 0.1,
     })
-      .to(
-        paths,
-        {
-          filter: "drop-shadow(0 0 8px rgba(184, 242, 230, 0.6))",
-          duration: 0.4,
-        },
-        "-=0.5"
-      )
-      .to({}, { duration: 0.8 });
+    .to(paths, {
+      filter: "drop-shadow(0 0 10px #912d06)",
+      fill: "#912d06", // повертаємо колір підпису
+      duration: 0.6,
+    }, "-=0.3")
+    .to({}, { duration: 50}); // затримка перед зникненням
 
-    return () => {
-      tl.kill();
-    };
+    return () => { tl.kill(); };
   }, [onAnimationComplete]);
 
   if (!isMounted) return null;
@@ -87,51 +91,42 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
   return (
     <div
       ref={containerRef}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
+      className={styles.loaderWrap} // використовуємо ваші старі стилі контейнера
+      style={{ 
+        position: "fixed", 
+        zIndex: 100000, 
+        backgroundColor: "#0e0e0e", // або ваш колір фону
         width: "100%",
         height: "100vh",
+        top: 0,
+        left: 0,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#1c1c1c",
-        zIndex: 100000,
+        alignItems: "center"
       }}
     >
-      {/* glow */}
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "400px",
-          height: "400px",
-          background:
-            "radial-gradient(circle, rgba(184, 242, 230, 0.1) 0%, transparent 70%)",
-          animation: "pulse 3s ease-in-out infinite",
-        }}
-      />
-
-      {/* SVG */}
-      <SignatureSVG
-        ref={svgRef}
-        style={{
-          width: "320px",
-          height: "auto",
-          position: "relative",
-          zIndex: 1,
-        }}
-      />
-
-      <style>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-          50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.1); }
-        }
-      `}</style>
+      <div className={styles.loader}>
+        <ElectricBorder
+          color={hoverColor}
+          speed={1.9}
+          chaos={0.5}          
+          style={{
+            borderRadius: "50%",
+            minHeight: "220px",
+            minWidth: "220px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "20px"
+            
+          }}
+        >
+          {/* animation SVG */}
+          <div style={{ width: "180px", display: "flex", justifyContent: "center" }}>
+            <SignSvg ref={svgRef} />
+          </div>
+        </ElectricBorder>
+      </div>
     </div>
   );
 };

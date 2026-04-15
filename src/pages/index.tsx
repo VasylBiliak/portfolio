@@ -23,7 +23,7 @@ const IndexPage: React.FC<PageProps> = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2700);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

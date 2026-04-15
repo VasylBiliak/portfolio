@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const About: React.FC = () => {
     return (
-        <div className={styles.info_dp_section}>
+        <section className={styles.info_dp_section}>
             <div className={styles.about_info}>
                 <p tabIndex={0}>
                     In the past, I worked as a software developer for industrial controllers and created Human-Machine Interfaces (HMI panels).
@@ -24,7 +24,7 @@ const About: React.FC = () => {
                              layout="constrained"
                 />
             </div>
-        </div>
+        </section>
     );
 };
 

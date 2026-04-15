@@ -1,0 +1,58 @@
+/* --------------------------------------------
+   1. CSS RESET & BASE STYLES
+   -------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+
+html {
+    font-size: 65%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scrollbar-color: var(--color-teal-medium) transparent;
+}
+
+/* Prevent text selection on interactive elements */gfr
+* {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Re-enable text selection for content elements */
+p, input, textarea {
+    user-select: text;
+}
+
+/* Selection styling */
+::selection {
+    background-color: var(--color-green-dark);
+    color: var(--text-primary);
+}
+
+::-moz-selection {
+    background-color: var(--color-green-dark);
+    color: var(--text-primary);
+}

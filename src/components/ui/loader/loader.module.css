@@ -1,7 +1,6 @@
 .loaderWrap {
   position: fixed;
   inset: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,6 +32,8 @@
   flex-direction: column;
 }
 
+
+/* Loader text styles */
 .loaderText {
   color: #e1d4a0;
   font-size: 1.5rem;

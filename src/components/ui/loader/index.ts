@@ -1,2 +1,2 @@
-export { default } from './Loader';
+export { default } from './SplashLoader';
 /* export { default } from './SplashLoader'; */

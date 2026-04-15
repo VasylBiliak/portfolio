@@ -12,7 +12,7 @@
     "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
     "build": "gatsby build --prefix-paths",
     "deploy:dev": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages-dev",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
