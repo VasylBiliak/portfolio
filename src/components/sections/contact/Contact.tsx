@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
     };
 
     const validateEmail = (email: string) => {
-        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zAZ0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return emailRegex.test(email);
     };
 
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                 onClose={() => setIsModalOpen(false)}
                 message={modalMessage}
             />
-            <form className={styles.contact_us__fields} id="contactForm" noValidate="novalidate">
+            <form className={styles.contact_us__fields} id="contactForm" noValidate>
                 <input
                     className={`${styles.contact_us__input}`}
                     id="email"

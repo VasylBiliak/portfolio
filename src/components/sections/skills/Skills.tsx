@@ -5,11 +5,10 @@ import { AiOutlinePython } from "react-icons/ai";
 import { RiTailwindCssLine } from "react-icons/ri";
 import { LiaYarn } from "react-icons/lia";
 import { SiTypescript, SiRedux, SiGatsby, SiMysql, SiMongodb, SiFirebase,
-    SiPostgresql, SiNextdotjs, SiFlask, SiFigma  } from 'react-icons/si';
+    SiPostgresql, SiNextdotjs, SiFlask, SiFigma } from 'react-icons/si';
 import { MdDevices } from 'react-icons/md';
 import { SiPostman, SiExpress } from "react-icons/si";
 import { RiVercelLine } from "react-icons/ri";
-import { SiLucide } from "react-icons/si";
 import * as styles from "./skills.module.css";
 
 
@@ -40,8 +39,6 @@ const skills = [
     { color: '#2C8EBB', text: 'Yarn', icon: LiaYarn },
     { color: '#3e863d', text: 'Express', icon: SiExpress },
     { color: '#ffffff', text: 'Vercel', icon: RiVercelLine },
-    { color: '#5E6AD2', text: 'SiLucide', icon: SiLucide },
-
 ];
 
 const Skills: React.FC = () => {
