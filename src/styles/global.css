@@ -56,8 +56,8 @@
 :root {
     /* Background Colors */
     --color-bg-main: var(--color-black);
-    --color-bg-section-el: rgba(0, 0, 0, 0.65);
-    --color-bg-input-focus: rgba(0, 0, 0, 0.75);
+    --color-bg-section-el: rgba(0, 0, 0, 0.5);
+    --color-bg-input-focus: rgba(0, 0, 0, 0.7);
 
     /* Theme Backgrounds (for future use) */
     --bg-primary: var(--color-dark-primary);
@@ -114,8 +114,8 @@
 [data-theme="light"] {
     /* Background Colors */
     --color-bg-main: var(--color-beige-light);
-    --color-bg-section-el: rgba(218, 206, 152, 0.65);
-    --color-bg-input-focus: rgba(224, 210, 156, 0.9);
+    --color-bg-section-el: rgba(218, 206, 152, 0.30);
+    --color-bg-input-focus: rgba(224, 210, 156, 0.6);
 
     /* Theme Backgrounds */
     --bg-primary: var(--color-white);

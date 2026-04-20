@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 20px;
-    align-items: center;
+    align-items: start;
     margin-top: 30px;
 }
 
@@ -39,6 +39,11 @@
 }
 
 @media (max-width: 768px) {
+.info_dp_section {
+
+    align-items: center;
+
+}
     .info_dp_section {
         grid-template-columns: 1fr;
     }

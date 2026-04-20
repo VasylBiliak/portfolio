@@ -10,7 +10,7 @@ interface SectionWrapperProps {
 
 const SectionWrapper: React.FC<SectionWrapperProps> = ({ title, section_id, children }) => {
     return (
-        <ScrollReveal className={styles.wrapper_section}>
+        <ScrollReveal >   
             <section className={styles.section_content} id={section_id}>
                 <h2 className={styles.section_title}>{title}</h2>
                 {children}

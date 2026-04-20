@@ -1,12 +1,3 @@
-.wrapper_section {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    column-gap: 20px;
-    justify-items: center;
-    gap: 6rem;
-}
-
 .section_content {
     display: grid;
     align-items: center;

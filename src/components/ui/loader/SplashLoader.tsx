@@ -52,7 +52,7 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
         strokeDasharray: length,
         strokeDashoffset: length,
         fill: "rgba(20, 207, 69, 0)",
-        stroke: "#912d06",
+        stroke: "#159374",
         strokeWidth: 1.5,
       });
     });
@@ -77,11 +77,11 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
       stagger: 0.1,
     })
     .to(paths, {
-      filter: "drop-shadow(0 0 10px #912d06)",
-      fill: "#912d06", // повертаємо колір підпису
+      filter: "drop-shadow(0 0 10px #159374)",
+      fill: "#096565",
       duration: 0.6,
     }, "-=0.3")
-    .to({}, { duration: 50}); // затримка перед зникненням
+    .to({}, { duration: 50}); 
 
     return () => { tl.kill(); };
   }, [onAnimationComplete]);
@@ -91,23 +91,23 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
   return (
     <div
       ref={containerRef}
-      className={styles.loaderWrap} // використовуємо ваші старі стилі контейнера
+      className={styles.loaderWrap}
       style={{ 
         position: "fixed", 
         zIndex: 100000, 
-        backgroundColor: "#0e0e0e", // або ваш колір фону
+        backgroundColor: "#0e0e0e",
         width: "100%",
         height: "100vh",
         top: 0,
         left: 0,
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <div className={styles.loader}>
         <ElectricBorder
-          color={hoverColor}
+          color="#ffff00"
           speed={1.9}
           chaos={0.5}          
           style={{

@@ -38,7 +38,7 @@ const SplashLoader: React.FC<SplashLoaderProps> = ({ onAnimationComplete }) => {
         strokeDasharray: length,
         strokeDashoffset: length,
         fill: "none",
-        stroke: "#14cf45",
+        stroke: "#159374",
         strokeWidth: 1.5,
         strokeLinecap: "round",
         strokeLinejoin: "round",

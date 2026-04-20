@@ -63,7 +63,6 @@ const ProjectCard: React.FC<Project> = ({
             color={borderColor}
             speed={isHovered ? 0.8 : 0.05}
             chaos={isHovered ? 0.1 : 0.08}
-            thickness={2}
             style={{ borderRadius: 12 }}
         >
             <div className={styles.card}
