@@ -10,6 +10,14 @@ export interface Project {
     // image?: string;
 }
 
+export interface ProjectCsvRow {
+    projectName: string;
+    repoUrl: string;
+    externalUrl: string;
+    description: string;
+    technologies: string;
+}
+
 export const projects: Project[] = [
         {
         projectName: 'Vor Studio',

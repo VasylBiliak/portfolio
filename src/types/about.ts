@@ -12,4 +12,5 @@ export interface AboutServiceResponse {
     data: AboutData | null;
     error: string | null;
     loading: boolean;
+    source?: 'cache' | 'google-sheets' | 'fallback';
 }
