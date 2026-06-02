@@ -1,26 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as styles from "./about.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby";
+import { fetchAboutData, clearCache } from "@/services/aboutService";
+import { AboutData } from "@/types/about";
 
-interface AboutProps {
-    data: {
-        aboutSheet: {
-            data: {
-                description: string;
-                imageAlt: string;
-                imagePath: string;
-            };
+const About: React.FC = () => {
+    const [data, setData] = useState<AboutData | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadData = async () => {
+            setLoading(true);
+            const response = await fetchAboutData();
+            
+            if (response.error) {
+                setError(response.error);
+            } else {
+                setData(response.data);
+                setError(null);
+            }
+            
+            setLoading(false);
         };
-    };
-}
 
-const About: React.FC<AboutProps> = ({ data }) => {
-    const { description, imageAlt, imagePath } = data.aboutSheet.data || {};
+        loadData();
+    }, []);
 
-    if (!description) {
+    if (loading) {
         return null;
     }
+
+    if (error || !data) {
+        return null;
+    }
+
+    const { description, imageAlt, imagePath } = data;
 
     return (
         <section className={styles.info_dp_section}>
@@ -30,8 +45,11 @@ const About: React.FC<AboutProps> = ({ data }) => {
                 </p>
             </div>
             <div className={styles.dp}>
+                
+                {/* <img className={styles.image} src={imagePath || "../../../images/Me.png"} alt={imageAlt || "My description"} />
+ */}                
                 <StaticImage className={styles.image}
-                             src={imagePath || "../../../images/Me.png"}
+                             src= "../../../images/Me.png"
                              alt={imageAlt || "My description"}
                              placeholder="blurred"
                              max-width={500}
@@ -44,15 +62,3 @@ const About: React.FC<AboutProps> = ({ data }) => {
 };
 
 export default About;
-
-export const query = graphql`
-    query AboutQuery {
-        aboutSheet(name: { eq: "about" }) {
-            data {
-                description
-                imageAlt
-                imagePath
-            }
-        }
-    }
-`;

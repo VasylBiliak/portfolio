@@ -15,14 +15,6 @@ const Projects: React.FC = () => {
                         projectName={project.projectName}
                         description={project.description}
                         technologies={project.technologies}
-                        // image={
-                        //     <img
-                        //         src={project.image || "/default-project.png"}
-                        //         alt={project.projectName || "/default-project.png"}
-                        //         className="w-full h-auto"
-                        //         loading="lazy"
-                        //     />
-                        // }
                     />
                 ))}
             </div>

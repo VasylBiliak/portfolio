@@ -1,9 +1,15 @@
+export interface AboutCsvColl {
+    name: string;
+    about: string;
+}
 export interface AboutData {
     description: string;
     imageAlt: string;
     imagePath: string;
 }
 
-export interface AboutSheetData {
-    aboutData: AboutData[];
+export interface AboutServiceResponse {
+    data: AboutData | null;
+    error: string | null;
+    loading: boolean;
 }
