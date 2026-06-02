@@ -21,6 +21,7 @@ typings/
 .cache
 **/.cache
 public
+ABOUT_GOOGLE_SHEETS_SETUP.md
 
 .DS_Store
 jspm_packages

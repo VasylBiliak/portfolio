@@ -68,6 +68,9 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+spreadsheetId: process.env.ABOUT_SHEET_URL
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

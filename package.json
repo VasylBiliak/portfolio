@@ -20,7 +20,6 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
-    "gsap": "^3.15.0",
     "gatsby": "^5.14.1",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^3.11.0",
@@ -32,7 +31,9 @@
     "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-plugin-webpack-statoscope": "^1.0.3",
     "gatsby-source-filesystem": "^5.14.0",
+    "gatsby-source-google-sheets": "^1.1.1",
     "gatsby-transformer-sharp": "^5.14.0",
+    "gsap": "^3.15.0",
     "nprogress": "^0.2.0",
     "qrcode": "^1.5.4",
     "qrcode.react": "^4.2.0",

@@ -1,23 +1,38 @@
 import React from "react";
 import * as styles from "./about.module.css";
 import { StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
-const About: React.FC = () => {
+interface AboutProps {
+    data: {
+        aboutSheet: {
+            data: {
+                description: string;
+                imageAlt: string;
+                imagePath: string;
+            };
+        };
+    };
+}
+
+const About: React.FC<AboutProps> = ({ data }) => {
+    const { description, imageAlt, imagePath } = data.aboutSheet.data || {};
+
+    if (!description) {
+        return null;
+    }
+
     return (
         <section className={styles.info_dp_section}>
             <div className={styles.about_info}>
                 <p tabIndex={0}>
-                    In the past, I worked as a software developer for industrial controllers and created Human-Machine Interfaces (HMI panels).
-                    This experience gave me a solid understanding of the importance of adaptive and user-friendly interfaces. Now, I’m a freelance
-                    frontend developer, working with technologies such as JavaScript, Next.js, Gatsby, as well as React and TypeScript. In addition
-                    to development, I’m actively learning SEO and implementing best practices to improve website visibility in search engines. My goal
-                    is to create efficient and user-friendly solutions that meet the needs of users and align with modern web standards.
+                    {description}
                 </p>
             </div>
             <div className={styles.dp}>
                 <StaticImage className={styles.image}
-                             src="../../../images/Me.png"
-                             alt="My description"
+                             src={imagePath || "../../../images/Me.png"}
+                             alt={imageAlt || "My description"}
                              placeholder="blurred"
                              max-width={500}
                              quality={100}
@@ -29,3 +44,15 @@ const About: React.FC = () => {
 };
 
 export default About;
+
+export const query = graphql`
+    query AboutQuery {
+        aboutSheet(name: { eq: "about" }) {
+            data {
+                description
+                imageAlt
+                imagePath
+            }
+        }
+    }
+`;
