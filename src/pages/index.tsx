@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useState, useEffect } from "react";
 import type { PageProps } from "gatsby";
 import Layout from "@/components/Layout";
 import Home from "../components/Home";
-import Seo from "@/components/Seo";
+/* import Seo from "@/components/Seo"; */
 import SectionWrapper from '@/components/sections/sectionWrapper';
 import Loader from "@/components/ui/loader";
 
@@ -51,5 +51,5 @@ const IndexPage: React.FC<PageProps> = () => {
     );
 };
 
-export const Head = () => <Seo />;
+/* export const Head = () => <Seo />; */
 export default IndexPage;

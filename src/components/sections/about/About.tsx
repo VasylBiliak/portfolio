@@ -1,23 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as styles from "./about.module.css";
 import { StaticImage } from "gatsby-plugin-image";
+import { fetchAboutData, clearCache } from "@/services/aboutService";
+import { AboutData } from "@/types/about";
 
 const About: React.FC = () => {
+    const [data, setData] = useState<AboutData | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const loadData = async () => {
+            setLoading(true);
+            const response = await fetchAboutData();
+            
+            if (response.error) {
+                setError(response.error);
+            } else {
+                setData(response.data);
+                setError(null);
+            }
+            
+            setLoading(false);
+        };
+
+        loadData();
+    }, []);
+
+    if (loading) {
+        return null;
+    }
+
+    if (error || !data) {
+        return null;
+    }
+
+    const { description, imageAlt, imagePath } = data;
+
     return (
         <section className={styles.info_dp_section}>
             <div className={styles.about_info}>
                 <p tabIndex={0}>
-                    In the past, I worked as a software developer for industrial controllers and created Human-Machine Interfaces (HMI panels).
-                    This experience gave me a solid understanding of the importance of adaptive and user-friendly interfaces. Now, I’m a freelance
-                    frontend developer, working with technologies such as JavaScript, Next.js, Gatsby, as well as React and TypeScript. In addition
-                    to development, I’m actively learning SEO and implementing best practices to improve website visibility in search engines. My goal
-                    is to create efficient and user-friendly solutions that meet the needs of users and align with modern web standards.
+                    {description}
                 </p>
             </div>
             <div className={styles.dp}>
+                
+                {/* <img className={styles.image} src={imagePath || "../../../images/Me.png"} alt={imageAlt || "My description"} />
+ */}                
                 <StaticImage className={styles.image}
-                             src="../../../images/Me.png"
-                             alt="My description"
+                             src= "../../../images/Me.png"
+                             alt={imageAlt || "My description"}
                              placeholder="blurred"
                              max-width={500}
                              quality={100}

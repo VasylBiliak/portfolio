@@ -1,9 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from '@/components/ui/card/ProjectCard';
-import { projects } from '@/data/projects'
+import { fetchProjectsData } from '@/services/projectsService';
+import { Project } from '@/data/projects';
 import * as styles from './projects.module.css';
 
 const Projects: React.FC = () => {
+    const [projects, setProjects] = useState<Project[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const loadProjects = async () => {
+            const response = await fetchProjectsData();
+            
+            if (response.data) {
+                setProjects(response.data);
+            }
+            
+            setLoading(false);
+        };
+
+        loadProjects();
+    }, []);
+
+    if (loading) {
+        return null;
+    }
+
     return (
         <div className={styles.projects_wrapper}>
             <div className={styles.projects_list}>
@@ -15,14 +37,6 @@ const Projects: React.FC = () => {
                         projectName={project.projectName}
                         description={project.description}
                         technologies={project.technologies}
-                        // image={
-                        //     <img
-                        //         src={project.image || "/default-project.png"}
-                        //         alt={project.projectName || "/default-project.png"}
-                        //         className="w-full h-auto"
-                        //         loading="lazy"
-                        //     />
-                        // }
                     />
                 ))}
             </div>
